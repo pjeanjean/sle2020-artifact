@@ -1,1 +1,7 @@
-# sle2020-artifact
+# Modular and distributed IDE
+
+## Introduction
+
+## Setup
+
+## Instructions

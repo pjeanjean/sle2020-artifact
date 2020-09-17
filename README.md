@@ -8,12 +8,14 @@ Scripts are provided to setup a local Kubernetes cluster to be used for the depl
 
 ## Setup
 
-The running environment is provided preconfigured and is available as an image for VirtualBox.
-To run the image, open VirtualBox and in the menu File select Import Appliance.
-Select the downloaded .ova file, click Next and Import.
-At the left side, right click on the created Vm and select Start.
+This artifact is running on the VM available [here](https://github.com/fcoulon/sle2020-artifact/releases/download/v1.0/DistributedIDE.ova)
+In order to run the VM, you will need to use [VirtualBox](https://www.virtualbox.org/).
 
-At the login screen, select user vagrant and set vagrant in password.
+From VirtualBox, open the `File` menu and select `Import Appliance`.
+Select the downloaded `DistributedIDE.ova` and press `Next` and `Import`.
+You should then see a new VM on the left side of the UI, right click on it and press `Start`.
+
+At the login screen, select user `vagrant` and set `vagrant` in password.
 
 Once logged, open a terminal and type:
 ```

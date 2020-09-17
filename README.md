@@ -15,7 +15,14 @@ At the left side, right click on the created Vm and select Start.
 
 At the login screen, select user vagrant and set vagrant in password.
 
-Once logged, open a terminal and type `~/git/sle2020-artifact`.
+Once logged, open a terminal and type:
+```
+cd 
+mkdir git
+cd git
+git clone https://github.com/fcoulon/sle2020-artifact.git
+~/git/sle2020-artifact
+```
 Type `./setup.sh` to install the required dependencies.
 Type `mvn install` to build all the projects of the repository"
 Type `cd backend` and then `./build-images.sh` to build the Docker images of the microservices used for the persistence.

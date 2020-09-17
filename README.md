@@ -21,6 +21,13 @@ Type `mvn install` to build all the projects of the repository"
 Type `cd backend` and then `./build-images.sh` to build the Docker images of the microservices used for the persistence.
 Type `~/git/sle2020-artifact/frontend`, then `npm install`, and then `npx webpack` to build the web app.
 
+We will use the Eclipse IDE and need to install a dependency to FeatureIDE.
+Open the folder `/home/vagrant/eclipse` and double click on `eclipse` to launch Eclipse IDE.
+Click on the `Launch` button.
+In the menu `Help` > `Install New Software...`
+Type `http://featureide.cs.ovgu.de/update/v3/` in the field `Work with` and press the key `Enter`
+Select `FeatureIDE 3.6` and click on the buttons `Next`, then`Next` again, and `Finish`.
+
 ## Instructions
 
 This section describes how to generate microservices for the NabLab language, how to deploy them and and to use the web application.

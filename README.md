@@ -2,11 +2,12 @@
 
 ## Introduction
 
-This artifact contains the Eclipse plugins necessary to generates microservices from DSL specifications and a web application to both use theses microservices and reconfigure their deployment.
-
-Scripts are provided to setup a local Kubernetes cluster to be used for the deployment of the microservices.
-
-The folder `eval-notebooks` contains the results of our evaluations.
+You will find in this repository:
+ - The Eclipse plugins needed to generates microservices from DSL specifications
+ - A web application allowing both to use these microservices and to reconfigure their deployment
+ - Scripts to setup a local Kubernetes cluster to be used for the deployment of the microservices
+ - The paper Modular and distributed IDE
+ - The results of our evaluations in the folder `eval-notebooks` contains 
 
 ## Setup
 

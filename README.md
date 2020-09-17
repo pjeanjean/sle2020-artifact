@@ -43,7 +43,7 @@ npx webpack # build the web app
 The Eclipse plugins we provide to generate microservices depends on FeatureIDE (a framework to manipulate Feature Models).
 Therefore , we have to install FeatureIDE into Eclipse IDE.
 
-Open the folder `/home/vagrant/eclipse` and double click on `eclipse` to launch Eclipse IDE.
+Open the folder `/home/vagrant/eclipse` and double click on `eclipse` to launch Eclipse IDE.  
 Click on the `Launch` button.
 In the menu `Help` > `Install New Software...`
 Type `http://featureide.cs.ovgu.de/update/v3/` in the field `Work with` and press the key `Enter`

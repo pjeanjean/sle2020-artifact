@@ -20,7 +20,7 @@ You should then see a new VM on the left side of the UI, right click on it and p
 
 At the login screen, select user `vagrant` and set `vagrant` in password.
 
-Once logged, open a terminal and type:
+Once logged you will need the content of this repository. To retrieve it, open a terminal and type:
 ```
 cd 
 mkdir git

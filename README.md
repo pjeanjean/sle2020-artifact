@@ -40,7 +40,8 @@ cd ~/git/sle2020-artifact/frontend
 npm install
 npx webpack # build the web app
 ```
-We will use the Eclipse IDE and need to install a dependency to FeatureIDE.
+The Eclipse plugins we provide to generate microservices depends on FeatureIDE (a framework to manipulate Feature Models).
+Therefore , we have to install FeatureIDE into Eclipse IDE.
 
 Open the folder `/home/vagrant/eclipse` and double click on `eclipse` to launch Eclipse IDE.
 Click on the `Launch` button.

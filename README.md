@@ -38,7 +38,7 @@ Open the folder `/home/vagrant/eclipse` and double click on `eclipse` to launch 
 Click on the `Launch` button.
 
 ### Import existing NabLab projects
-CLick on `Import project...` link at the left side.
+Click on `Import project...` link at the left side.
 Select `General` > `Existing Project into Workspace` and click on `Next`.
 Click on the `Browse...` button, select the folder `vagrant/git/sle2020-artifact/nablab` and click on the button `Open`.
 Click the button Browse and select the directory located at Home/git/distributed-xtext-server-for-lsp/nablab/nabla.xtext.parent
@@ -48,11 +48,12 @@ The files nabla.dsl is declaring the location the grammar of the NabLab language
 
 #### Generate microservices
 
-Do a right click on nabla.dsl and select generate FM. It will generate the project of the microservices containing the Feature Model used to validate the deployment of microservices.
+In the project `fr.cea.nabla`, do a right click on `nabla.dsl` and select `Generate (Feature Model)` > `FM Generator FM`. It will generate the project of the microservice containing the Feature Model used to validate the deployment of microservices.
+The project `completion` is generated with a missconfiguration. Do a right click on it and select `Properties`. In `Java Build Path`, click on the button `Add Folder...` at the right and check the missing folder `src-gen`, then `Apply and Close`.
 
-Do a right click on nabla.dsl and select generate services. It will generate the projects for all the microservices.
+In the project `fr.cea.nabla`, do a right click on `nabla.dsl` and select `Generate (Service)` > `Service Generator`. It will generate the projects for all the microservices implementing the IDE services.
 
-Do a right click on nabla.dsl and select generate Script. It generate the script to build Docker images and provision them in the cluster.
+In the project `fr.cea.nabla`, do a right click on `nabla.dsl` and select `Generate (Cluster Scripts)` > `Script Generator`. It generate the scripts to build Docker images and provision them in the cluster.
 
 ### Microservices deployement
 

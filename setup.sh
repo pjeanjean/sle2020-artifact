@@ -33,6 +33,7 @@ echo export PATH="~/apache-maven-3.6.3/bin:\$PATH" >> ~/.bashrc
 sudo dnf config-manager --add-repo https://download.docker.com/linux/fedora/docker-ce.repo
 sudo dnf install -y docker-ce docker-ce-cli containerd.io
 sudo systemctl enable docker
+sudo usermod -aG docker ${USER}
 
 # INSTALL NPM
 sudo dnf install -y npm

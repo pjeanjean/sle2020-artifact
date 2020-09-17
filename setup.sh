@@ -44,3 +44,14 @@ npm install --global http-server
 cd
 curl -Lo ./eclipse.tar.gz http://mirror.dkm.cz/eclipse/technology/epp/downloads/release/2020-09/R/eclipse-dsl-2020-09-R-linux-gtk-x86_64.tar.gz
 tar -xzf eclipse.tar.gz
+
+# GET ARTIFACT REPOSITORY
+cd
+mkdir git
+cd git
+git clone https://github.com/fcoulon/sle2020-artifact.git
+
+# INSTALL ECLIPSE PLUGINS
+cd
+cp ./git/sle2020-artifact/plugins/*.jar ./eclipse/dropins
+

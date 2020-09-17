@@ -21,27 +21,31 @@ This section describe how to generate microservices for the language NabLab, how
 
 ### Microservices generation
 
-Click on the menu Activities in the top left corner of the screen and open the file browser.
-In the folder eclipse-dsl-2020-06-R-linux-gtk-x86_64, launch the binary eclipse.
-At the start, Eclipse ask for a worksapce folder. Type demo-nablab.
+Open the folder `/home/vagrant/eclipse` and double click on `eclipse` to launch Eclipse IDE.
+Click on the `Launch` button.
 
 ### Import existing NabLab projects
-Open the menu File and select Import -> Existing project.
+CLick on `Import project...` link at the left side.
+Select `General` > `Existing Project into Workspace` and click on `Next`.
+Click on the `Browse...` button, select the folder `vagrant/git/sle2020-artifact/nablab` and click on the button `Open`.
 Click the button Browse and select the directory located at Home/git/distributed-xtext-server-for-lsp/nablab/nabla.xtext.parent
-Click on "recusive search" if is not activated.
-Select the projects fr.cea.nabla and fr.cea.nabla.ide and click on the button Finish.
-Theses two projects are Xtext projects definig the language NabLab.
+Click on the button `Finish` to import the two projects defining the Nablab language in the workspace.
 
 The files nabla.dsl is declaring the location the grammar of the NabLab language (.xtext file) and the location of the protocol file (.kaulua file).
 
 #### Generate microservices
 
 Do a right click on nabla.dsl and select generate FM. It will generate the project of the microservices containing the Feature Model used to validate the deployment of microservices.
+
 Do a right click on nabla.dsl and select generate services. It will generate the projects for all the microservices.
 
 Do a right click on nabla.dsl and select generate Script. It generate the script to build Docker images and provision them in the cluster.
 
 ### Microservices deployement
+
+Open a terminal and type `~/git/sle2020-artifact`.
+Type `mvn install` to build the projects"
+
 
 Click on the menu Activities in the top left corner of the screen and select the Terminal.
 Enter the command cd ~/git/distributed-xtext-server-for-lsp/

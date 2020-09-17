@@ -4,7 +4,6 @@ outDir
 *.class
 *.jar
 bin/
-src-gen/
 xtend-gen/
 target/
 out/

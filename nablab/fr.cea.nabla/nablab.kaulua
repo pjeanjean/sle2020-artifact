@@ -55,8 +55,8 @@ Protocol "IDE_for_Nablab"{
 		capabilities : 
 			index ["platform:/resource/fr.cea.nabla/services/workspace_index.json"]
 			didChange ["platform:/resource/fr.cea.nabla/services/workspace_didChange.json"]
-			didOpen ["platform:/resource/fr.cea.nabla/services/didOpen.json"]
-			didClose ["platform:/resource/fr.cea.nabla/services/didClose.json"]
+			didOpen ["platform:/resource/fr.cea.nabla/services/workspace_didOpen.json"]
+			didClose ["platform:/resource/fr.cea.nabla/services/workspace_didClose.json"]
 	}
 	
 	dependencies {

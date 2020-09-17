@@ -1,6 +1,7 @@
 #!/bin/bash
 
-LANG_FOLDER=$1
+LANG=nablab
+LANG_FOLDER=./nablab-ms
 
 # Create the cluster 
 kind delete cluster --name clusterone
@@ -17,14 +18,14 @@ kind load docker-image kaulua/document-storage --name clusterone
 echo "Load kaulua/router"
 kind load docker-image kaulua/lsp-router --name clusterone
 
-./$LANG_FOLDER/load-images.sh
+$LANG_FOLDER/load-images.sh
 
 # Full deployment
 kubectl apply -f base-deployment.yaml
 kubectl apply -f $LANG_FOLDER/deployment.yaml
 
 # Launch external services
-docker run -d --rm -p 7070:8080 kaulua/feature-model
+docker run -d --rm -p 7070:8080 $LANG/feature-model
 
 # Install Jaeger
 #kubectl create -f https://raw.githubusercontent.com/jaegertracing/jaeger-kubernetes/master/all-in-one/jaeger-all-in-one-template.yml

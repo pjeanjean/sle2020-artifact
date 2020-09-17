@@ -12,7 +12,6 @@
 	<modules>
 	<module>ClusterInspector</module>
 	<module>document-storage</module>
-	<module>feature-model</module>
 	<module>lsp</module>
 	</modules>
 

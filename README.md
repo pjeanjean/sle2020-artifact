@@ -26,7 +26,7 @@ cd
 mkdir git
 cd git
 git clone https://github.com/fcoulon/sle2020-artifact.git
-~/git/sle2020-artifact
+cd ~/git/sle2020-artifact
 ```
 Type `./setup.sh` to install the required dependencies.
 Type `mvn install` to build all the projects of the repository"

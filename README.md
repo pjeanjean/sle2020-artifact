@@ -31,7 +31,7 @@ git clone https://github.com/fcoulon/sle2020-artifact.git
 Type `./setup.sh` to install the additional required tools that can't be included in the VM image (due to the Github's limitation of 2 Go)
 
 To build the content of the repository, type the following commands:
-````
+```
 cd ~/git/sle2020-artifact
 mvn install
 cd backend

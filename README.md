@@ -6,6 +6,8 @@ This artifact contains the Eclipse plugins necessary to generates microservices 
 
 Scripts are provided to setup a local Kubernetes cluster to be used for the deployment of the microservices.
 
+The folder `eval-notebooks` contains the results of our evaluations.
+
 ## Setup
 
 This artifact is running on the VM available [here](https://github.com/fcoulon/sle2020-artifact/releases/download/v1.0/DistributedIDE.ova)

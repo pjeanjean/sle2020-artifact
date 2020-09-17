@@ -83,6 +83,15 @@ All theses services are provided by the deployed microservices.
 #### Deployement reconfiguration
 
 We will now change the deployment configuration of the microservices.
+
+First we will inspect the content of the Kubernetes clucster via its Dashboard.
+It is available at `http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/#/cluster?namespace=default`.
+The required token it display at the end of the logs of the command `./initCluster` (in the first terminal you opened).
+
+In the menu `Cluster` > `Nodes` you can see the three nodes of the cluster `control-plane` and the two `woker` where we deploy the microservices.
+
+In the menu `Pods`, you have the list of the deployed microservices and on which node they are. (it mays have two pages of Pods)
+
 Click on `New deployment` menu at the left.
 This page allows to select which IDE service will be available.
 For example, deselect `definition`to remove the `Go to definition` service.

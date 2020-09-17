@@ -26,14 +26,22 @@ cd
 mkdir git
 cd git
 git clone https://github.com/fcoulon/sle2020-artifact.git
-cd ~/git/sle2020-artifact
 ```
-Type `./setup.sh` to install the required dependencies.
-Type `mvn install` to build all the projects of the repository"
-Type `cd backend` and then `./build-images.sh` to build the Docker images of the microservices used for the persistence.
-Type `~/git/sle2020-artifact/frontend`, then `npm install`, and then `npx webpack` to build the web app.
 
+Type `./setup.sh` to install the additional required tools that can't be included in the VM image (due to the Github's limitation of 2 Go)
+
+To build the content of the repository, type the following commands:
+````
+cd ~/git/sle2020-artifact
+mvn install
+cd backend
+./build-images.sh # build the Docker images of the microservices used for the persistence
+cd ~/git/sle2020-artifact/frontend
+npm install
+npx webpack # build the web app
+```
 We will use the Eclipse IDE and need to install a dependency to FeatureIDE.
+
 Open the folder `/home/vagrant/eclipse` and double click on `eclipse` to launch Eclipse IDE.
 Click on the `Launch` button.
 In the menu `Help` > `Install New Software...`

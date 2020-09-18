@@ -22,7 +22,7 @@ cd java
 curl -Lo ./java11.tar.gz https://download.java.net/java/GA/jdk11/9/GPL/openjdk-11.0.2_linux-x64_bin.tar.gz
 tar -xzf java11.tar.gz
 rm java11.tar.gz
-echo export PATH="~/java/jdk-11/bin:\$PATH" >> ~/.bashrc
+echo export PATH="~/java/jdk-11.0.2/bin:\$PATH" >> ~/.bashrc
 
 # INSTALL MAVEN
 cd

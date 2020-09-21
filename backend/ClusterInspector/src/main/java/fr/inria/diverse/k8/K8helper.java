@@ -5,35 +5,26 @@ import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Optional;
 import java.util.Set;
-import java.util.Map.Entry;
 import java.util.stream.Collectors;
 
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
-import javax.ws.rs.core.MediaType;
-
-import com.squareup.okhttp.Call;
-
-import io.kubernetes.client.ApiCallback;
-import io.kubernetes.client.ApiClient;
-import io.kubernetes.client.ApiException;
-import io.kubernetes.client.Configuration;
-import io.kubernetes.client.apis.CoreV1Api;
 import io.kubernetes.client.custom.IntOrString;
-import io.kubernetes.client.models.V1ContainerPort;
-import io.kubernetes.client.models.V1Node;
-import io.kubernetes.client.models.V1NodeList;
-import io.kubernetes.client.models.V1Pod;
-import io.kubernetes.client.models.V1PodBuilder;
-import io.kubernetes.client.models.V1PodList;
-import io.kubernetes.client.models.V1Service;
-import io.kubernetes.client.models.V1ServiceBuilder;
-import io.kubernetes.client.models.V1ServicePort;
-import io.kubernetes.client.models.V1Status;
-import io.kubernetes.client.util.ClientBuilder;
+import io.kubernetes.client.openapi.ApiClient;
+import io.kubernetes.client.openapi.ApiException;
+import io.kubernetes.client.openapi.Configuration;
+import io.kubernetes.client.openapi.apis.CoreV1Api;
+import io.kubernetes.client.openapi.models.V1ContainerPort;
+import io.kubernetes.client.openapi.models.V1Node;
+import io.kubernetes.client.openapi.models.V1NodeList;
+import io.kubernetes.client.openapi.models.V1Pod;
+import io.kubernetes.client.openapi.models.V1PodBuilder;
+import io.kubernetes.client.openapi.models.V1PodList;
+import io.kubernetes.client.openapi.models.V1Service;
+import io.kubernetes.client.openapi.models.V1ServiceBuilder;
+import io.kubernetes.client.openapi.models.V1ServicePort;
+import io.kubernetes.client.openapi.models.V1Status;
 import io.kubernetes.client.util.Config;
 
 public class K8helper {
@@ -49,14 +40,7 @@ public class K8helper {
 		
 		System.out.println("Received configuration: " + configuration);
 		
-		// Init
-		try {
-			ApiClient client = Config.fromConfig(clusterConfigPath);
-//			client.setDebugging(true);
-			Configuration.setDefaultApiClient(client);
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+		ApiClient client = initClient(clusterConfigPath);
 
 		CoreV1Api api = new CoreV1Api();
 
@@ -87,11 +71,22 @@ public class K8helper {
 				String label = currentPod.get().getSpec().getNodeSelector().get(NODE_LABEL);
 				if (label != null && !label.equals(selectedNode)) {
 					deleteFeature(api, featureName);
-					try {
-						Thread.sleep(1000);
-					} catch (InterruptedException e) {
-						e.printStackTrace();
+										
+					// Wait pod is deleted, with 10 seconds timeout 
+					for(int i = 0; i < 10; i++) {
+						currentDeployement = getPods(api);
+						currentPod = findCurrentPod(currentDeployement, featureName);
+						if(currentPod.isEmpty()) {
+							System.out.println("Pod "+featureName + " deleted");
+							break;
+						}
+						try {
+							Thread.sleep(1000);
+						} catch (InterruptedException e) {
+							e.printStackTrace();
+						}
 					}
+					
 					deployFeature(api, featureName, selectedNode);
 				}
 			} else {
@@ -105,6 +100,19 @@ public class K8helper {
 			System.out.println("Delete: "+toDelete);
 			deleteFeature(api, toDelete);
 		}
+	}
+
+	private static ApiClient initClient(String clusterConfigPath) {
+		// Init
+		try {
+			ApiClient client = Config.fromConfig(clusterConfigPath);
+//			client.setDebugging(true);
+			Configuration.setDefaultApiClient(client);
+			return client;
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return null;
 	}
 
 	protected static Optional<V1Pod> findCurrentPod(List<V1Pod> currentDeployement, String podName) {
@@ -136,6 +144,7 @@ public class K8helper {
 			api.createNamespacedPod("default", pod, null, null, null);
 			api.createNamespacedService("default", service, null, null, null);
 		} catch (ApiException e) {
+			System.out.println(e.getResponseBody());
 			e.printStackTrace();
 		}
 	}
@@ -285,7 +294,7 @@ public class K8helper {
 			ApiClient client = Config.fromConfig(clusterConfigPath);
 			Configuration.setDefaultApiClient(client);
 			CoreV1Api api = new CoreV1Api();
-			V1NodeList nodeList = api.listNode(true, null, null, null, null, null, null, null, false);
+			V1NodeList nodeList = api.listNode(null, true, null, null, null, null, null, null, false);
 			List<V1Node> nodes = nodeList.getItems();
 			
 			for(V1Node node : nodes) {
@@ -309,13 +318,7 @@ public class K8helper {
 	public static Map<String, String> getDeployment(String clusterConfigPath) {
 		Map<String, String> configuration = new HashMap<>();
 		
-		// Init
-		try {
-			ApiClient client = Config.fromConfig(clusterConfigPath);
-			Configuration.setDefaultApiClient(client);
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+		initClient(clusterConfigPath);
 
 		CoreV1Api api = new CoreV1Api();
 

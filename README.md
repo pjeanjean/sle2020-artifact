@@ -2,11 +2,12 @@
 
 ## Introduction
 
-This artifact contains the Eclipse plugins necessary to generates microservices from DSL specifications and a web application to both use theses microservices and reconfigure their deployment.
-
-Scripts are provided to setup a local Kubernetes cluster to be used for the deployment of the microservices.
-
-The folder `eval-notebooks` contains the results of our evaluations.
+You will find in this repository:
+ - The Eclipse plugins needed to generates microservices from DSL specifications
+ - A web application allowing both to use these microservices and to reconfigure their deployment
+ - Scripts to setup a local Kubernetes cluster to be used for the deployment of the microservices
+ - The paper Modular and distributed IDE
+ - The results of our evaluations in the folder `eval-notebooks` contains 
 
 ## Setup
 
@@ -19,24 +20,33 @@ You should then see a new VM on the left side of the UI, right click on it and p
 
 At the login screen, select user `vagrant` and set `vagrant` in password.
 
-Once logged, open a terminal and type:
+Once logged you will need the content of this repository. To retrieve it, open a terminal and type:
 ```
 cd 
 mkdir git
 cd git
 git clone https://github.com/fcoulon/sle2020-artifact.git
-~/git/sle2020-artifact
 ```
-Type `./setup.sh` to install the required dependencies.
-Type `mvn install` to build all the projects of the repository"
-Type `cd backend` and then `./build-images.sh` to build the Docker images of the microservices used for the persistence.
-Type `~/git/sle2020-artifact/frontend`, then `npm install`, and then `npx webpack` to build the web app.
 
-We will use the Eclipse IDE and need to install a dependency to FeatureIDE.
-Open the folder `/home/vagrant/eclipse` and double click on `eclipse` to launch Eclipse IDE.
-Click on the `Launch` button.
-In the menu `Help` > `Install New Software...`
-Type `http://featureide.cs.ovgu.de/update/v3/` in the field `Work with` and press the key `Enter`
+Type `./setup.sh` to install the additional required tools that can't be included in the VM image (due to the Github's limitation of 2 Go)
+
+To build the content of the repository, type the following commands:
+```
+cd ~/git/sle2020-artifact
+mvn install
+cd backend
+./build-images.sh # build the Docker images of the microservices used for the persistence
+cd ~/git/sle2020-artifact/frontend
+npm install
+npx webpack # build the web app
+```
+The Eclipse plugins we provide to generate microservices depends on FeatureIDE (a framework to manipulate Feature Models).
+Therefore , we have to install FeatureIDE into Eclipse IDE.
+
+Open the folder `/home/vagrant/eclipse` and double click on `eclipse` to launch Eclipse IDE.  
+Click on the `Launch` button.  
+In the menu `Help` > `Install New Software...`  
+Type `http://featureide.cs.ovgu.de/update/v3/` in the field `Work with` and press the key `Enter`  
 Select `FeatureIDE 3.6` and click on the buttons `Next`, then`Next` again, and `Finish`.
 
 ## Instructions

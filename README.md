@@ -11,7 +11,7 @@ You will find in this repository:
 
 ## Setup
 
-This artifact is running on the VM available [here](https://github.com/fcoulon/sle2020-artifact/releases/download/v1.0/DistributedIDE.ova)
+This artifact is a VM image available [here](https://zenodo.org/badge/DOI/10.5281/zenodo.4042582.svg)](https://doi.org/10.5281/zenodo.4042582)
 In order to run the VM, you will need to use [VirtualBox](https://www.virtualbox.org/).
 
 From VirtualBox, open the `File` menu and select `Import Appliance`.

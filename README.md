@@ -18,37 +18,6 @@ From VirtualBox, open the `File` menu and select `Import Appliance`.
 Select the downloaded `DistributedIDE.ova` and press `Next` and `Import`.
 You should then see a new VM on the left side of the UI, right click on it and press `Start`.
 
-At the login screen, select user `vagrant` and set `vagrant` in password.
-
-Once logged you will need the content of this repository. To retrieve it, open a terminal and type:
-```
-cd 
-mkdir git
-cd git
-git clone https://github.com/fcoulon/sle2020-artifact.git
-```
-
-Type `./setup.sh` to install the additional required tools that can't be included in the VM image (due to the Github's limitation of 2 Go)
-
-To build the content of the repository, type the following commands:
-```
-cd ~/git/sle2020-artifact
-mvn install
-cd backend
-./build-images.sh # build the Docker images of the microservices used for the persistence
-cd ~/git/sle2020-artifact/frontend
-npm install
-npx webpack # build the web app
-```
-The Eclipse plugins we provide to generate microservices depends on FeatureIDE (a framework to manipulate Feature Models).
-Therefore , we have to install FeatureIDE into Eclipse IDE.
-
-Open the folder `/home/vagrant/eclipse` and double click on `eclipse` to launch Eclipse IDE.  
-Click on the `Launch` button.  
-In the menu `Help` > `Install New Software...`  
-Type `http://featureide.cs.ovgu.de/update/v3/` in the field `Work with` and press the key `Enter`  
-Select `FeatureIDE 3.6` and click on the buttons `Next`, then`Next` again, and `Finish`.
-
 ## Instructions
 
 This section describes how to generate microservices for the NabLab language, how to deploy them and and to use the web application.
@@ -58,38 +27,45 @@ This section describes how to generate microservices for the NabLab language, ho
 Open the folder `/home/vagrant/eclipse` and double click on `eclipse` to launch Eclipse IDE.
 Click on the `Launch` button.
 
-### Import existing NabLab projects
-Click on `Import project...` link at the left side.
-Select `General` > `Existing Project into Workspace` and click on `Next`.
-Click on the `Browse...` button, select the folder `vagrant/git/sle2020-artifact/nablab` and click on the button `Open`.
-Click the button Browse and select the directory located at Home/git/distributed-xtext-server-for-lsp/nablab/nabla.xtext.parent
-Click on the button `Finish` to import the two projects defining the Nablab language in the workspace.
+The workspace contains the projects `fr.cea.nabla` and `fr.cea.nabla.ide` implementing the language NabLab.
 
-The files nabla.dsl is declaring the location the grammar of the NabLab language (.xtext file) and the location of the protocol file (.kaulua file).
+The mains files are located in the project `fr.cea.nabla` :
+* `nabla.dsl` : the Nablab language specification
+* `nabla.xtext` : the grammar specification
+* `nablab.kaulua` : the protocol specification
 
 #### Generate microservices
 
-In the project `fr.cea.nabla`, do a right click on `nabla.dsl` and select `Generate (Feature Model)` > `FM Generator FM`. It will generate the project of the microservice containing the Feature Model used to validate the deployment of microservices.
-The project `completion` is generated with a missconfiguration. Do a right click on it and select `Properties`. In `Java Build Path`, click on the button `Add Folder...` at the right and check the missing folder `src-gen`, then `Apply and Close`.
+*Feature model*
+In the project `fr.cea.nabla`, do a right click on `nabla.dsl` and select `Generate (Feature Model)` > `FM Generator FM`. It will generate the project of the microservice containing the Feature Model used to validate the deployment of microservices. (the generation takes few seconds)
 
-In the project `fr.cea.nabla`, do a right click on `nabla.dsl` and select `Generate (Service)` > `Service Generator`. It will generate the projects for all the microservices implementing the IDE services.
+*Microservices*
+In the project `fr.cea.nabla`, do a right click on `nabla.dsl` and select `Generate (Service)` > `Service Generator`. It will generate the projects for all the microservices implementing the IDE services. (the generation takes around one minute)
 
+*Deployment scripts*
 In the project `fr.cea.nabla`, do a right click on `nabla.dsl` and select `Generate (Cluster Scripts)` > `Script Generator`. It generate the scripts to build Docker images and provision them in the cluster.
 
 ### Microservices deployement
 
-Open a terminal and type `cd ~/git/sle2020-artifact`.
-Type `cd nablab-ms` and then `build-images.sh` to build the Docker images of the microservices for Nablab.
+*Feature model build*
+Open a terminal and type `cd ~/eclipse-workspace/feature-model`.
+Type `build-images.sh` to build the Docker images of the deployment validator microservice for Nablab.
 
-Then go back with `cd ~/git/sle2020-artifact` and type `./initCluster.sh` to launch a mini Kubernetes cluster locally and do an initial deployment of the Nablab microservices.
+*Microservices build*
+Open a terminal and type `cd ~/eclipse-workspace/nablab`.
+Type `build-images.sh` to build the Docker images of the microservices for Nablab.
+
+*Local Kubernetes cluster*
+Go back with `cd ~/git/sle2020-artifact` and type `./initCluster.sh ~/eclipse-workspace/nablab` to launch a mini Kubernetes cluster locally and do an initial deployment of the Nablab microservices.
 This command may take few minutes to complete.
 
 Open a new tab `with Ctrl+Shift+T`.
 Enter the command `./launchClusterInspector.sh`. It will launch a service used to interact with the cluster.
 
+*Serve the web app*
 Open a new tab `with Ctrl+Shift+T` again.
 Enter `cd frontend`.
-Enter `npm run start:dev`. This command compile the webpage and makes it accessible at `localhost:8081`.
+Enter `http-server -o`. This command serve the web app and makes it accessible at `localhost:8081`.
 
 ### Web application
 
@@ -103,8 +79,8 @@ At the right side click on the `UPLOAD` button and open the file `git/sle2020-ar
 Do a double click on `Glace2d` to open it in the editor.
 
 The editor is now communicating with the microservices.
-For example, errors markers are computed by a dedicated microservice.
-If you click on the variable `node` in the block `connectivities`, you get the positions in the program using this symbol.
+For example, errors markers are computed by a dedicated microservice and displayed back in the editor.
+If you click on the variable `node` in the block `connectivities`, you get the positions in the program refering to this symbol.
 By doing a right click and selecting `Rename symbol` you can rename it.
 You can also go back to the variable declaration if you do a right click on a symbol and select `Go to definition`.
 All theses services are provided by the deployed microservices.
@@ -122,16 +98,17 @@ In the menu `Cluster` > `Nodes` you can see the three nodes of the cluster `cont
 In the menu `Pods`, you have the list of the deployed microservices and on which node they are. (it mays have two pages of Pods)
 
 Click on `New deployment` menu at the left.
-This page allows to select which IDE service will be available.
+This page allows to select which IDE services will be available.
 For example, deselect `definition`to remove the `Go to definition` service.
-Check the root `IDE_for_NabLab` that is mandatory and click on the `Next` button.
+Check the root `IDE_for_NabLab` which is mandatory and click on the `Next` button.
 This page display the two nodes of the cluster and where the microservices are deployed.
 The list at the left show the candidate services to add in the node. Once selected they are addes by clicking on the `>` button.
 The list at the right show the services that are inside the node. The can be removed by a selection and a click on the `<` button.
 You can for example remove `rename` from `node2` and add it to `node1`.
 Click on the `Next` button to go to the page that summaries your microservice deployment.
 Click on the `DEPLOY` button to apply the deployement.
-
 The change can be viewed in the Kubernetes Dashboard.
-If you go back to the Nablab editor, you will see that the `Go to definition` is not there anymore and that the `rename` is still working.
+
+Reload the page `localhost:8081` and  go back to the Nablab editor.
+You will see that the `Go to definition` is not there anymore and that the `rename` is still working.
 

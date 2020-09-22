@@ -101,7 +101,7 @@ public class InspectorResource {
 		JSONArray nodeConfigs = new JSONArray(deployment);
 		for(int i = 0; i < nodeConfigs.length(); i++) {
 			JSONObject nodeConfig = nodeConfigs.getJSONObject(i);
-			String featureName = nodeConfig.getString("featureName");
+			String featureName = nodeConfig.getString("featureName").toLowerCase();
 			String nodeName = nodeConfig.getString("deploymentLocation");
 			configuration.put(featureName, nodeName);
 //			JSONArray jFeatures = nodeConfig.getJSONArray("features");

@@ -124,6 +124,7 @@ public class K8helper {
 				.filter(pod -> !"mongo-db".equals(pod.getMetadata().getName()))
 				.filter(pod -> !"storage".equals(pod.getMetadata().getName()))
 				.filter(pod -> !"deployer".equals(pod.getMetadata().getName()))
+				.filter(pod -> !"router".equals(pod.getMetadata().getName()))
 				.filter(pod -> !pod.getMetadata().getName().startsWith("jaeger"))
 				.map(pod -> pod.getMetadata().getName()).collect(Collectors.toList());
 	}

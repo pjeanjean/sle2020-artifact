@@ -132,7 +132,8 @@ export default class DeploymentCreatorComponent extends React.Component<Deployme
       this.removeFeatureFromDeployment(feat)
     }
 
-    const features = newSelection.join("\n")
+    let features = newSelection.join("\n")
+    features = features + "\nrouter"
     const isValid = this.httpPost("http://localhost:7070/configuration",features) == 'true'
     console.log(isValid);
 
@@ -198,6 +199,9 @@ export default class DeploymentCreatorComponent extends React.Component<Deployme
     const features = []
     for(var child of featureTree.tree.children) {
       features.push(child.name)
+      for(var child2 of child.children) {
+        features.push(child2.name)
+      }
     }
 
     const initConf: NodeConfig[] = []
@@ -211,15 +215,16 @@ export default class DeploymentCreatorComponent extends React.Component<Deployme
       const location = featureConf.deploymentLocation
       console.log(featureName+" -> "+location);
       
-      if(features.includes(featureName) && this.props.nodes.includes(location)) {
+      let match = features.find(e => e.toLowerCase() == featureName)
+      if(match !== undefined && this.props.nodes.includes(location)) {
         const node = initConf.find( (node:NodeConfig) => node.nodeName == location)
         console.log(node);
         if(node == undefined) {
-          const newNode = {nodeName : location, features: [featureName]}
+          const newNode = {nodeName : location, features: [match]}
           initConf.push(newNode)
         }
         else {
-          node.features.push(featureName)
+          node.features.push(match)
         }
       }
     }

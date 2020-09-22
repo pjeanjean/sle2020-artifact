@@ -1,7 +1,8 @@
 #!/bin/bash
 
 LANG=nablab
-LANG_FOLDER=./nablab-ms
+LANG_FOLDER=$1
+#LANG_FOLDER=./nablab-ms
 
 # Create the cluster 
 kind delete cluster --name clusterone

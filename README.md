@@ -61,7 +61,7 @@ Go back with `cd ~/git/sle2020-artifact` and type `./initCluster.sh ~/eclipse-wo
 This command may take few minutes to complete.
 
 Open a new tab `with Ctrl+Shift+T`.
-Enter the command `./launchClusterInspector.sh`. It will launch a service used to interact with the cluster.
+Enter the command `./launchInspector.sh`. It will launch a service used to interact with the cluster.
 
 **Serve the web app**  
 Open a new tab `with Ctrl+Shift+T` again.

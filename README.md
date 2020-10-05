@@ -37,33 +37,33 @@ The mains files are located in the project `fr.cea.nabla` :
 
 #### Generate microservices
 
-*Feature model*
+**Feature model**  
 In the project `fr.cea.nabla`, do a right click on `nabla.dsl` and select `Generate (Feature Model)` > `FM Generator FM`. It will generate the project of the microservice containing the Feature Model used to validate the deployment of microservices. (the generation takes few seconds)
 
-*Microservices*
+**Microservices**  
 In the project `fr.cea.nabla`, do a right click on `nabla.dsl` and select `Generate (Service)` > `Service Generator`. It will generate the projects for all the microservices implementing the IDE services. (the generation takes around one minute)
 
-*Deployment scripts*
+**Deployment scripts**  
 In the project `fr.cea.nabla`, do a right click on `nabla.dsl` and select `Generate (Cluster Scripts)` > `Script Generator`. It generate the scripts to build Docker images and provision them in the cluster.
 
 ### Microservices deployement
 
-*Feature model build*
+**Feature model build**  
 Open a terminal and type `cd ~/eclipse-workspace/feature-model`.
 Type `build-images.sh` to build the Docker images of the deployment validator microservice for Nablab.
 
-*Microservices build*
+**Microservices build**  
 Open a terminal and type `cd ~/eclipse-workspace/nablab`.
 Type `build-images.sh` to build the Docker images of the microservices for Nablab.
 
-*Local Kubernetes cluster*
+**Local Kubernetes cluster**  
 Go back with `cd ~/git/sle2020-artifact` and type `./initCluster.sh ~/eclipse-workspace/nablab` to launch a mini Kubernetes cluster locally and do an initial deployment of the Nablab microservices.
 This command may take few minutes to complete.
 
 Open a new tab `with Ctrl+Shift+T`.
 Enter the command `./launchClusterInspector.sh`. It will launch a service used to interact with the cluster.
 
-*Serve the web app*
+**Serve the web app**  
 Open a new tab `with Ctrl+Shift+T` again.
 Enter `cd frontend`.
 Enter `http-server -o`. This command serve the web app and makes it accessible at `localhost:8081`.
@@ -76,7 +76,7 @@ Open Firefox and enter the URL `localhost:8081` to open the web application conn
 
 There are two menu at the left side: `New deployment` and `Nablab editor`.
 Click on `Nablab editor` to acces to the NabLab program editor.
-At the right side click on the `UPLOAD` button and open the file `git/sle2020-artifact/Glace2d.nabla` to send a NabLab program in the cluster.
+At the right side click on the `UPLOAD` button and open the file `git/sle2020-artifact/nablab/Glace2d.nabla` to send a NabLab program in the cluster.
 Do a double click on `Glace2d` to open it in the editor.
 
 The editor is now communicating with the microservices.
@@ -92,13 +92,13 @@ We will now change the deployment configuration of the microservices.
 
 First we will inspect the content of the Kubernetes clucster via its Dashboard.
 It is available at `http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/#/cluster?namespace=default`.
-The required token it display at the end of the logs of the command `./initCluster` (in the first terminal you opened).
+The required token is displayed at the end of the logs of the command `./initCluster` (in the first terminal you opened).
 
 In the menu `Cluster` > `Nodes` you can see the three nodes of the cluster `control-plane` and the two `woker` where we deploy the microservices.
 
 In the menu `Pods`, you have the list of the deployed microservices and on which node they are. (it mays have two pages of Pods)
 
-Click on `New deployment` menu at the left.
+From the Web app, click on `New deployment` menu at the left.
 This page allows to select which IDE services will be available.
 For example, deselect `definition`to remove the `Go to definition` service.
 Check the root `IDE_for_NabLab` which is mandatory and click on the `Next` button.
@@ -110,6 +110,6 @@ Click on the `Next` button to go to the page that summaries your microservice de
 Click on the `DEPLOY` button to apply the deployement.
 The change can be viewed in the Kubernetes Dashboard.
 
-Reload the page `localhost:8081` and  go back to the Nablab editor.
+Reload the Web app (i.e., retype the URL `localhost:8081` in Firefox) and  go back to the Nablab editor.
 You will see that the `Go to definition` is not there anymore and that the `rename` is still working.
 

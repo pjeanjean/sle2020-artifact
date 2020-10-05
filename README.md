@@ -77,7 +77,7 @@ Open Firefox and enter the URL `localhost:8081` to open the web application conn
 There are two menu at the left side: `New deployment` and `Nablab editor`.
 Click on `Nablab editor` to acces to the NabLab program editor.
 At the right side click on the `UPLOAD` button and open the file `git/sle2020-artifact/nablab/Glace2d.nabla` to send a NabLab program in the cluster.
-Do a double click on `Glace2d` (which appeared under the "UPLOAD" button) to open it in the editor.
+Do a double click on `Glace2d` (which appeared on top of the "UPLOAD" button) to open it in the editor.
 
 The editor is now communicating with the microservices.
 For example, errors markers are computed by a dedicated microservice and displayed back in the editor.

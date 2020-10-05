@@ -49,23 +49,23 @@ In the project `fr.cea.nabla`, do a right click on `nabla.dsl` and select `Gener
 ### Microservices deployement
 
 **Feature model build**  
-Open a terminal and type `cd ~/eclipse-workspace/feature-model`.
+Open a terminal and type `cd ~/eclipse-workspace/feature-model`.  
 Type `build-images.sh` to build the Docker images of the deployment validator microservice for Nablab.
 
 **Microservices build**  
-Open a terminal and type `cd ~/eclipse-workspace/nablab`.
+In the same terminal, type `cd ~/eclipse-workspace/nablab`.  
 Type `build-images.sh` to build the Docker images of the microservices for Nablab.
 
 **Local Kubernetes cluster**  
-Go back with `cd ~/git/sle2020-artifact` and type `./initCluster.sh ~/eclipse-workspace/nablab` to launch a mini Kubernetes cluster locally and do an initial deployment of the Nablab microservices.
+Go back with `cd ~/git/sle2020-artifact` and type `./initCluster.sh ~/eclipse-workspace/nablab` to launch a mini Kubernetes cluster locally and do an initial deployment of the Nablab microservices.  
 This command may take few minutes to complete.
 
-Open a new tab `with Ctrl+Shift+T`.
+Open a new tab `with Ctrl+Shift+T`.  
 Enter the command `./launchInspector.sh`. It will launch a service used to interact with the cluster.
 
 **Serve the web app**  
-Open a new tab `with Ctrl+Shift+T` again.
-Enter `cd frontend`.
+Open a new tab `with Ctrl+Shift+T` again.  
+Enter `cd frontend`.  
 Enter `http-server -o`. This command serve the web app and makes it accessible at `localhost:8081`.
 
 ### Web application

@@ -50,11 +50,11 @@ In the project `fr.cea.nabla`, do a right-click on `nabla.dsl` and select `Gener
 
 **Feature model build**  
 Open a terminal and type `cd ~/eclipse-workspace/feature-model`.  
-Type `build-images.sh` to build the Docker images of the deployment validator microservice for Nablab.
+Type `./build-images.sh` to build the Docker images of the deployment validator microservice for Nablab.
 
 **Microservices build**  
 In the same terminal, type `cd ~/eclipse-workspace/nablab`.  
-Type `build-images.sh` to build the Docker images of the microservices for Nablab.
+Type `./build-images.sh` to build the Docker images of the microservices for Nablab.
 
 **Local Kubernetes cluster**  
 Go back with `cd ~/git/sle2020-artifact` and type `./initCluster.sh ~/eclipse-workspace/nablab` to launch a mini Kubernetes cluster locally and do an initial deployment of the Nablab microservices.  
@@ -86,7 +86,7 @@ By doing a right-click and selecting `Rename symbol` you can rename it.
 You can also go back to the variable declaration if you do a right-click on a symbol and select `Go to definition`.
 All these services are provided by the deployed microservices.
 
-#### Deployement reconfiguration
+#### Deployment reconfiguration
 
 We will now change the deployment configuration of the microservices.
 

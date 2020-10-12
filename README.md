@@ -19,6 +19,8 @@ From VirtualBox, open the `File` menu and select `Import Appliance`.
 Select the downloaded `DistributedIDE.ova` and press `Next` and `Import`.
 You should then see a new VM on the left side of the UI, right-click on it and press `Start`.
 
+**_NOTE:_**  To log in the VM: user is `vagrant` and password is `vagrant`.
+
 ## Instructions
 
 This section describes how to generate microservices for the NabLab language, how to deploy them, and to use the web application.

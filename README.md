@@ -14,7 +14,7 @@ You will find in this repository:
 
 ## Setup
 
-This artifact is a VM image available here: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4042582.svg)](https://doi.org/10.5281/zenodo.4042582)
+This artifact is a VM image available here: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4244899.svg)](https://doi.org/10.5281/zenodo.4244899)
 
 To run the VM, you will need to use [VirtualBox](https://www.virtualbox.org/).
 

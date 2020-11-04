@@ -69,7 +69,7 @@ Open a new tab `with Ctrl+Shift+T`.
 Enter the command `./launchInspector.sh`. It will launch a service used to interact with the cluster.
 
 **Serve the web app**  
-Open a new tab `with Ctrl+Shift+T` again.  
+Open a new tab with `Ctrl+Shift+T` again.  
 Enter `cd frontend`.  
 Enter `http-server -o`. This command serves the web app and makes it accessible at `localhost:8081`.
 
@@ -86,7 +86,7 @@ Do a double click on `Glace2d` (which appeared on top of the "UPLOAD" button) to
 
 The editor is now communicating with the microservices.
 For example, error markers are computed by a dedicated microservice and displayed back in the editor.
-If you click on the variable `node` in the block `connectivities`, you get the positions in the program referring to this symbol.
+If you click on the variable `nodes` in the block `connectivities`, you get the positions in the program referring to this symbol.
 By doing a right-click and selecting `Rename symbol` you can rename it.
 You can also go back to the variable declaration if you do a right-click on a symbol and select `Go to definition`.
 All these services are provided by the deployed microservices.

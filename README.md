@@ -3,9 +3,12 @@
 ## Introduction
 
 You will find in this repository:
- - The Eclipse plugins needed to generate microservices from DSL specifications
- - A web application allowing both to use these microservices and to reconfigure their deployment
+ - The Eclipse plugins needed to generate microservices from DSL specifications in the folder `plugins` (source code in the folder `generator`)
+ - A web application allowing both to use these microservices and to reconfigure their deployment in the folder `frontend`
  - Scripts to set up a local Kubernetes cluster to be used for the deployment of the microservices
+ - The languages NabLab, Logo, MiniJava and ThingML
+ - The source code of the monolithic servers in the in the folder `monolithicServers`
+ - The source code of the microservices in the in the folders `<LANG_NAME>-ms`
  - The paper Modular and distributed IDE
  - The results of our evaluations in the folder `eval-notebooks` 
 

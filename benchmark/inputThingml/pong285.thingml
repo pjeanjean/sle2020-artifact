@@ -1,0 +1,12576 @@
+
+thing fragment PingPongMsgs {
+	message ping();
+	message pong();
+}
+
+thing PingServer includes PingPongMsgs {
+
+	provided port ping_service {
+		sends pong
+		receives ping
+	}
+
+	statechart PongServerMachine init Active {
+
+        on entry print "Ping Server Started!\n"
+
+		state Active {
+			
+			internal event ping_service?ping
+			action ping_service!pong()
+			
+		}
+	}
+}
+
+thing fragment PingPongMsgs1 {
+	message ping();
+	message pong();
+}
+
+thing PingClient1 includes PingPongMsgs1 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs2 {
+	message ping();
+	message pong();
+}
+
+thing PingClient2 includes PingPongMsgs2 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs3 {
+	message ping();
+	message pong();
+}
+
+thing PingClient3 includes PingPongMsgs3 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs4 {
+	message ping();
+	message pong();
+}
+
+thing PingClient4 includes PingPongMsgs4 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs5 {
+	message ping();
+	message pong();
+}
+
+thing PingClient5 includes PingPongMsgs5 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs6 {
+	message ping();
+	message pong();
+}
+
+thing PingClient6 includes PingPongMsgs6 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs7 {
+	message ping();
+	message pong();
+}
+
+thing PingClient7 includes PingPongMsgs7 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs8 {
+	message ping();
+	message pong();
+}
+
+thing PingClient8 includes PingPongMsgs8 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs9 {
+	message ping();
+	message pong();
+}
+
+thing PingClient9 includes PingPongMsgs9 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs10 {
+	message ping();
+	message pong();
+}
+
+thing PingClient10 includes PingPongMsgs10 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs11 {
+	message ping();
+	message pong();
+}
+
+thing PingClient11 includes PingPongMsgs11 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs12 {
+	message ping();
+	message pong();
+}
+
+thing PingClient12 includes PingPongMsgs12 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs13 {
+	message ping();
+	message pong();
+}
+
+thing PingClient13 includes PingPongMsgs13 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs14 {
+	message ping();
+	message pong();
+}
+
+thing PingClient14 includes PingPongMsgs14 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs15 {
+	message ping();
+	message pong();
+}
+
+thing PingClient15 includes PingPongMsgs15 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs16 {
+	message ping();
+	message pong();
+}
+
+thing PingClient16 includes PingPongMsgs16 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs17 {
+	message ping();
+	message pong();
+}
+
+thing PingClient17 includes PingPongMsgs17 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs18 {
+	message ping();
+	message pong();
+}
+
+thing PingClient18 includes PingPongMsgs18 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs19 {
+	message ping();
+	message pong();
+}
+
+thing PingClient19 includes PingPongMsgs19 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs20 {
+	message ping();
+	message pong();
+}
+
+thing PingClient20 includes PingPongMsgs20 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs21 {
+	message ping();
+	message pong();
+}
+
+thing PingClient21 includes PingPongMsgs21 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs22 {
+	message ping();
+	message pong();
+}
+
+thing PingClient22 includes PingPongMsgs22 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs23 {
+	message ping();
+	message pong();
+}
+
+thing PingClient23 includes PingPongMsgs23 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs24 {
+	message ping();
+	message pong();
+}
+
+thing PingClient24 includes PingPongMsgs24 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs25 {
+	message ping();
+	message pong();
+}
+
+thing PingClient25 includes PingPongMsgs25 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs26 {
+	message ping();
+	message pong();
+}
+
+thing PingClient26 includes PingPongMsgs26 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs27 {
+	message ping();
+	message pong();
+}
+
+thing PingClient27 includes PingPongMsgs27 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs28 {
+	message ping();
+	message pong();
+}
+
+thing PingClient28 includes PingPongMsgs28 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs29 {
+	message ping();
+	message pong();
+}
+
+thing PingClient29 includes PingPongMsgs29 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs30 {
+	message ping();
+	message pong();
+}
+
+thing PingClient30 includes PingPongMsgs30 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs31 {
+	message ping();
+	message pong();
+}
+
+thing PingClient31 includes PingPongMsgs31 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs32 {
+	message ping();
+	message pong();
+}
+
+thing PingClient32 includes PingPongMsgs32 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs33 {
+	message ping();
+	message pong();
+}
+
+thing PingClient33 includes PingPongMsgs33 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs34 {
+	message ping();
+	message pong();
+}
+
+thing PingClient34 includes PingPongMsgs34 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs35 {
+	message ping();
+	message pong();
+}
+
+thing PingClient35 includes PingPongMsgs35 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs36 {
+	message ping();
+	message pong();
+}
+
+thing PingClient36 includes PingPongMsgs36 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs37 {
+	message ping();
+	message pong();
+}
+
+thing PingClient37 includes PingPongMsgs37 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs38 {
+	message ping();
+	message pong();
+}
+
+thing PingClient38 includes PingPongMsgs38 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs39 {
+	message ping();
+	message pong();
+}
+
+thing PingClient39 includes PingPongMsgs39 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs40 {
+	message ping();
+	message pong();
+}
+
+thing PingClient40 includes PingPongMsgs40 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs41 {
+	message ping();
+	message pong();
+}
+
+thing PingClient41 includes PingPongMsgs41 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs42 {
+	message ping();
+	message pong();
+}
+
+thing PingClient42 includes PingPongMsgs42 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs43 {
+	message ping();
+	message pong();
+}
+
+thing PingClient43 includes PingPongMsgs43 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs44 {
+	message ping();
+	message pong();
+}
+
+thing PingClient44 includes PingPongMsgs44 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs45 {
+	message ping();
+	message pong();
+}
+
+thing PingClient45 includes PingPongMsgs45 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs46 {
+	message ping();
+	message pong();
+}
+
+thing PingClient46 includes PingPongMsgs46 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs47 {
+	message ping();
+	message pong();
+}
+
+thing PingClient47 includes PingPongMsgs47 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs48 {
+	message ping();
+	message pong();
+}
+
+thing PingClient48 includes PingPongMsgs48 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs49 {
+	message ping();
+	message pong();
+}
+
+thing PingClient49 includes PingPongMsgs49 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs50 {
+	message ping();
+	message pong();
+}
+
+thing PingClient50 includes PingPongMsgs50 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs51 {
+	message ping();
+	message pong();
+}
+
+thing PingClient51 includes PingPongMsgs51 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs52 {
+	message ping();
+	message pong();
+}
+
+thing PingClient52 includes PingPongMsgs52 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs53 {
+	message ping();
+	message pong();
+}
+
+thing PingClient53 includes PingPongMsgs53 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs54 {
+	message ping();
+	message pong();
+}
+
+thing PingClient54 includes PingPongMsgs54 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs55 {
+	message ping();
+	message pong();
+}
+
+thing PingClient55 includes PingPongMsgs55 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs56 {
+	message ping();
+	message pong();
+}
+
+thing PingClient56 includes PingPongMsgs56 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs57 {
+	message ping();
+	message pong();
+}
+
+thing PingClient57 includes PingPongMsgs57 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs58 {
+	message ping();
+	message pong();
+}
+
+thing PingClient58 includes PingPongMsgs58 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs59 {
+	message ping();
+	message pong();
+}
+
+thing PingClient59 includes PingPongMsgs59 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs60 {
+	message ping();
+	message pong();
+}
+
+thing PingClient60 includes PingPongMsgs60 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs61 {
+	message ping();
+	message pong();
+}
+
+thing PingClient61 includes PingPongMsgs61 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs62 {
+	message ping();
+	message pong();
+}
+
+thing PingClient62 includes PingPongMsgs62 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs63 {
+	message ping();
+	message pong();
+}
+
+thing PingClient63 includes PingPongMsgs63 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs64 {
+	message ping();
+	message pong();
+}
+
+thing PingClient64 includes PingPongMsgs64 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs65 {
+	message ping();
+	message pong();
+}
+
+thing PingClient65 includes PingPongMsgs65 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs66 {
+	message ping();
+	message pong();
+}
+
+thing PingClient66 includes PingPongMsgs66 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs67 {
+	message ping();
+	message pong();
+}
+
+thing PingClient67 includes PingPongMsgs67 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs68 {
+	message ping();
+	message pong();
+}
+
+thing PingClient68 includes PingPongMsgs68 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs69 {
+	message ping();
+	message pong();
+}
+
+thing PingClient69 includes PingPongMsgs69 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs70 {
+	message ping();
+	message pong();
+}
+
+thing PingClient70 includes PingPongMsgs70 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs71 {
+	message ping();
+	message pong();
+}
+
+thing PingClient71 includes PingPongMsgs71 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs72 {
+	message ping();
+	message pong();
+}
+
+thing PingClient72 includes PingPongMsgs72 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs73 {
+	message ping();
+	message pong();
+}
+
+thing PingClient73 includes PingPongMsgs73 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs74 {
+	message ping();
+	message pong();
+}
+
+thing PingClient74 includes PingPongMsgs74 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs75 {
+	message ping();
+	message pong();
+}
+
+thing PingClient75 includes PingPongMsgs75 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs76 {
+	message ping();
+	message pong();
+}
+
+thing PingClient76 includes PingPongMsgs76 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs77 {
+	message ping();
+	message pong();
+}
+
+thing PingClient77 includes PingPongMsgs77 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs78 {
+	message ping();
+	message pong();
+}
+
+thing PingClient78 includes PingPongMsgs78 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs79 {
+	message ping();
+	message pong();
+}
+
+thing PingClient79 includes PingPongMsgs79 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs80 {
+	message ping();
+	message pong();
+}
+
+thing PingClient80 includes PingPongMsgs80 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs81 {
+	message ping();
+	message pong();
+}
+
+thing PingClient81 includes PingPongMsgs81 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs82 {
+	message ping();
+	message pong();
+}
+
+thing PingClient82 includes PingPongMsgs82 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs83 {
+	message ping();
+	message pong();
+}
+
+thing PingClient83 includes PingPongMsgs83 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs84 {
+	message ping();
+	message pong();
+}
+
+thing PingClient84 includes PingPongMsgs84 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs85 {
+	message ping();
+	message pong();
+}
+
+thing PingClient85 includes PingPongMsgs85 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs86 {
+	message ping();
+	message pong();
+}
+
+thing PingClient86 includes PingPongMsgs86 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs87 {
+	message ping();
+	message pong();
+}
+
+thing PingClient87 includes PingPongMsgs87 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs88 {
+	message ping();
+	message pong();
+}
+
+thing PingClient88 includes PingPongMsgs88 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs89 {
+	message ping();
+	message pong();
+}
+
+thing PingClient89 includes PingPongMsgs89 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs90 {
+	message ping();
+	message pong();
+}
+
+thing PingClient90 includes PingPongMsgs90 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs91 {
+	message ping();
+	message pong();
+}
+
+thing PingClient91 includes PingPongMsgs91 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs92 {
+	message ping();
+	message pong();
+}
+
+thing PingClient92 includes PingPongMsgs92 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs93 {
+	message ping();
+	message pong();
+}
+
+thing PingClient93 includes PingPongMsgs93 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs94 {
+	message ping();
+	message pong();
+}
+
+thing PingClient94 includes PingPongMsgs94 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs95 {
+	message ping();
+	message pong();
+}
+
+thing PingClient95 includes PingPongMsgs95 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs96 {
+	message ping();
+	message pong();
+}
+
+thing PingClient96 includes PingPongMsgs96 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs97 {
+	message ping();
+	message pong();
+}
+
+thing PingClient97 includes PingPongMsgs97 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs98 {
+	message ping();
+	message pong();
+}
+
+thing PingClient98 includes PingPongMsgs98 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs99 {
+	message ping();
+	message pong();
+}
+
+thing PingClient99 includes PingPongMsgs99 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs100 {
+	message ping();
+	message pong();
+}
+
+thing PingClient100 includes PingPongMsgs100 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs101 {
+	message ping();
+	message pong();
+}
+
+thing PingClient101 includes PingPongMsgs101 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs102 {
+	message ping();
+	message pong();
+}
+
+thing PingClient102 includes PingPongMsgs102 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs103 {
+	message ping();
+	message pong();
+}
+
+thing PingClient103 includes PingPongMsgs103 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs104 {
+	message ping();
+	message pong();
+}
+
+thing PingClient104 includes PingPongMsgs104 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs105 {
+	message ping();
+	message pong();
+}
+
+thing PingClient105 includes PingPongMsgs105 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs106 {
+	message ping();
+	message pong();
+}
+
+thing PingClient106 includes PingPongMsgs106 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs107 {
+	message ping();
+	message pong();
+}
+
+thing PingClient107 includes PingPongMsgs107 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs108 {
+	message ping();
+	message pong();
+}
+
+thing PingClient108 includes PingPongMsgs108 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs109 {
+	message ping();
+	message pong();
+}
+
+thing PingClient109 includes PingPongMsgs109 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs110 {
+	message ping();
+	message pong();
+}
+
+thing PingClient110 includes PingPongMsgs110 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs111 {
+	message ping();
+	message pong();
+}
+
+thing PingClient111 includes PingPongMsgs111 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs112 {
+	message ping();
+	message pong();
+}
+
+thing PingClient112 includes PingPongMsgs112 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs113 {
+	message ping();
+	message pong();
+}
+
+thing PingClient113 includes PingPongMsgs113 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs114 {
+	message ping();
+	message pong();
+}
+
+thing PingClient114 includes PingPongMsgs114 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs115 {
+	message ping();
+	message pong();
+}
+
+thing PingClient115 includes PingPongMsgs115 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs116 {
+	message ping();
+	message pong();
+}
+
+thing PingClient116 includes PingPongMsgs116 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs117 {
+	message ping();
+	message pong();
+}
+
+thing PingClient117 includes PingPongMsgs117 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs118 {
+	message ping();
+	message pong();
+}
+
+thing PingClient118 includes PingPongMsgs118 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs119 {
+	message ping();
+	message pong();
+}
+
+thing PingClient119 includes PingPongMsgs119 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs120 {
+	message ping();
+	message pong();
+}
+
+thing PingClient120 includes PingPongMsgs120 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs121 {
+	message ping();
+	message pong();
+}
+
+thing PingClient121 includes PingPongMsgs121 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs122 {
+	message ping();
+	message pong();
+}
+
+thing PingClient122 includes PingPongMsgs122 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs123 {
+	message ping();
+	message pong();
+}
+
+thing PingClient123 includes PingPongMsgs123 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs124 {
+	message ping();
+	message pong();
+}
+
+thing PingClient124 includes PingPongMsgs124 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs125 {
+	message ping();
+	message pong();
+}
+
+thing PingClient125 includes PingPongMsgs125 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs126 {
+	message ping();
+	message pong();
+}
+
+thing PingClient126 includes PingPongMsgs126 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs127 {
+	message ping();
+	message pong();
+}
+
+thing PingClient127 includes PingPongMsgs127 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs128 {
+	message ping();
+	message pong();
+}
+
+thing PingClient128 includes PingPongMsgs128 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs129 {
+	message ping();
+	message pong();
+}
+
+thing PingClient129 includes PingPongMsgs129 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs130 {
+	message ping();
+	message pong();
+}
+
+thing PingClient130 includes PingPongMsgs130 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs131 {
+	message ping();
+	message pong();
+}
+
+thing PingClient131 includes PingPongMsgs131 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs132 {
+	message ping();
+	message pong();
+}
+
+thing PingClient132 includes PingPongMsgs132 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs133 {
+	message ping();
+	message pong();
+}
+
+thing PingClient133 includes PingPongMsgs133 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs134 {
+	message ping();
+	message pong();
+}
+
+thing PingClient134 includes PingPongMsgs134 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs135 {
+	message ping();
+	message pong();
+}
+
+thing PingClient135 includes PingPongMsgs135 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs136 {
+	message ping();
+	message pong();
+}
+
+thing PingClient136 includes PingPongMsgs136 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs137 {
+	message ping();
+	message pong();
+}
+
+thing PingClient137 includes PingPongMsgs137 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs138 {
+	message ping();
+	message pong();
+}
+
+thing PingClient138 includes PingPongMsgs138 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs139 {
+	message ping();
+	message pong();
+}
+
+thing PingClient139 includes PingPongMsgs139 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs140 {
+	message ping();
+	message pong();
+}
+
+thing PingClient140 includes PingPongMsgs140 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs141 {
+	message ping();
+	message pong();
+}
+
+thing PingClient141 includes PingPongMsgs141 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs142 {
+	message ping();
+	message pong();
+}
+
+thing PingClient142 includes PingPongMsgs142 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs143 {
+	message ping();
+	message pong();
+}
+
+thing PingClient143 includes PingPongMsgs143 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs144 {
+	message ping();
+	message pong();
+}
+
+thing PingClient144 includes PingPongMsgs144 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs145 {
+	message ping();
+	message pong();
+}
+
+thing PingClient145 includes PingPongMsgs145 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs146 {
+	message ping();
+	message pong();
+}
+
+thing PingClient146 includes PingPongMsgs146 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs147 {
+	message ping();
+	message pong();
+}
+
+thing PingClient147 includes PingPongMsgs147 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs148 {
+	message ping();
+	message pong();
+}
+
+thing PingClient148 includes PingPongMsgs148 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs149 {
+	message ping();
+	message pong();
+}
+
+thing PingClient149 includes PingPongMsgs149 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs150 {
+	message ping();
+	message pong();
+}
+
+thing PingClient150 includes PingPongMsgs150 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs151 {
+	message ping();
+	message pong();
+}
+
+thing PingClient151 includes PingPongMsgs151 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs152 {
+	message ping();
+	message pong();
+}
+
+thing PingClient152 includes PingPongMsgs152 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs153 {
+	message ping();
+	message pong();
+}
+
+thing PingClient153 includes PingPongMsgs153 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs154 {
+	message ping();
+	message pong();
+}
+
+thing PingClient154 includes PingPongMsgs154 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs155 {
+	message ping();
+	message pong();
+}
+
+thing PingClient155 includes PingPongMsgs155 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs156 {
+	message ping();
+	message pong();
+}
+
+thing PingClient156 includes PingPongMsgs156 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs157 {
+	message ping();
+	message pong();
+}
+
+thing PingClient157 includes PingPongMsgs157 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs158 {
+	message ping();
+	message pong();
+}
+
+thing PingClient158 includes PingPongMsgs158 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs159 {
+	message ping();
+	message pong();
+}
+
+thing PingClient159 includes PingPongMsgs159 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs160 {
+	message ping();
+	message pong();
+}
+
+thing PingClient160 includes PingPongMsgs160 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs161 {
+	message ping();
+	message pong();
+}
+
+thing PingClient161 includes PingPongMsgs161 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs162 {
+	message ping();
+	message pong();
+}
+
+thing PingClient162 includes PingPongMsgs162 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs163 {
+	message ping();
+	message pong();
+}
+
+thing PingClient163 includes PingPongMsgs163 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs164 {
+	message ping();
+	message pong();
+}
+
+thing PingClient164 includes PingPongMsgs164 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs165 {
+	message ping();
+	message pong();
+}
+
+thing PingClient165 includes PingPongMsgs165 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs166 {
+	message ping();
+	message pong();
+}
+
+thing PingClient166 includes PingPongMsgs166 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs167 {
+	message ping();
+	message pong();
+}
+
+thing PingClient167 includes PingPongMsgs167 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs168 {
+	message ping();
+	message pong();
+}
+
+thing PingClient168 includes PingPongMsgs168 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs169 {
+	message ping();
+	message pong();
+}
+
+thing PingClient169 includes PingPongMsgs169 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs170 {
+	message ping();
+	message pong();
+}
+
+thing PingClient170 includes PingPongMsgs170 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs171 {
+	message ping();
+	message pong();
+}
+
+thing PingClient171 includes PingPongMsgs171 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs172 {
+	message ping();
+	message pong();
+}
+
+thing PingClient172 includes PingPongMsgs172 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs173 {
+	message ping();
+	message pong();
+}
+
+thing PingClient173 includes PingPongMsgs173 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs174 {
+	message ping();
+	message pong();
+}
+
+thing PingClient174 includes PingPongMsgs174 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs175 {
+	message ping();
+	message pong();
+}
+
+thing PingClient175 includes PingPongMsgs175 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs176 {
+	message ping();
+	message pong();
+}
+
+thing PingClient176 includes PingPongMsgs176 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs177 {
+	message ping();
+	message pong();
+}
+
+thing PingClient177 includes PingPongMsgs177 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs178 {
+	message ping();
+	message pong();
+}
+
+thing PingClient178 includes PingPongMsgs178 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs179 {
+	message ping();
+	message pong();
+}
+
+thing PingClient179 includes PingPongMsgs179 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs180 {
+	message ping();
+	message pong();
+}
+
+thing PingClient180 includes PingPongMsgs180 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs181 {
+	message ping();
+	message pong();
+}
+
+thing PingClient181 includes PingPongMsgs181 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs182 {
+	message ping();
+	message pong();
+}
+
+thing PingClient182 includes PingPongMsgs182 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs183 {
+	message ping();
+	message pong();
+}
+
+thing PingClient183 includes PingPongMsgs183 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs184 {
+	message ping();
+	message pong();
+}
+
+thing PingClient184 includes PingPongMsgs184 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs185 {
+	message ping();
+	message pong();
+}
+
+thing PingClient185 includes PingPongMsgs185 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs186 {
+	message ping();
+	message pong();
+}
+
+thing PingClient186 includes PingPongMsgs186 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs187 {
+	message ping();
+	message pong();
+}
+
+thing PingClient187 includes PingPongMsgs187 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs188 {
+	message ping();
+	message pong();
+}
+
+thing PingClient188 includes PingPongMsgs188 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs189 {
+	message ping();
+	message pong();
+}
+
+thing PingClient189 includes PingPongMsgs189 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs190 {
+	message ping();
+	message pong();
+}
+
+thing PingClient190 includes PingPongMsgs190 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs191 {
+	message ping();
+	message pong();
+}
+
+thing PingClient191 includes PingPongMsgs191 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs192 {
+	message ping();
+	message pong();
+}
+
+thing PingClient192 includes PingPongMsgs192 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs193 {
+	message ping();
+	message pong();
+}
+
+thing PingClient193 includes PingPongMsgs193 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs194 {
+	message ping();
+	message pong();
+}
+
+thing PingClient194 includes PingPongMsgs194 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs195 {
+	message ping();
+	message pong();
+}
+
+thing PingClient195 includes PingPongMsgs195 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs196 {
+	message ping();
+	message pong();
+}
+
+thing PingClient196 includes PingPongMsgs196 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs197 {
+	message ping();
+	message pong();
+}
+
+thing PingClient197 includes PingPongMsgs197 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs198 {
+	message ping();
+	message pong();
+}
+
+thing PingClient198 includes PingPongMsgs198 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs199 {
+	message ping();
+	message pong();
+}
+
+thing PingClient199 includes PingPongMsgs199 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs200 {
+	message ping();
+	message pong();
+}
+
+thing PingClient200 includes PingPongMsgs200 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs201 {
+	message ping();
+	message pong();
+}
+
+thing PingClient201 includes PingPongMsgs201 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs202 {
+	message ping();
+	message pong();
+}
+
+thing PingClient202 includes PingPongMsgs202 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs203 {
+	message ping();
+	message pong();
+}
+
+thing PingClient203 includes PingPongMsgs203 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs204 {
+	message ping();
+	message pong();
+}
+
+thing PingClient204 includes PingPongMsgs204 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs205 {
+	message ping();
+	message pong();
+}
+
+thing PingClient205 includes PingPongMsgs205 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs206 {
+	message ping();
+	message pong();
+}
+
+thing PingClient206 includes PingPongMsgs206 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs207 {
+	message ping();
+	message pong();
+}
+
+thing PingClient207 includes PingPongMsgs207 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs208 {
+	message ping();
+	message pong();
+}
+
+thing PingClient208 includes PingPongMsgs208 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs209 {
+	message ping();
+	message pong();
+}
+
+thing PingClient209 includes PingPongMsgs209 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs210 {
+	message ping();
+	message pong();
+}
+
+thing PingClient210 includes PingPongMsgs210 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs211 {
+	message ping();
+	message pong();
+}
+
+thing PingClient211 includes PingPongMsgs211 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs212 {
+	message ping();
+	message pong();
+}
+
+thing PingClient212 includes PingPongMsgs212 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs213 {
+	message ping();
+	message pong();
+}
+
+thing PingClient213 includes PingPongMsgs213 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs214 {
+	message ping();
+	message pong();
+}
+
+thing PingClient214 includes PingPongMsgs214 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs215 {
+	message ping();
+	message pong();
+}
+
+thing PingClient215 includes PingPongMsgs215 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs216 {
+	message ping();
+	message pong();
+}
+
+thing PingClient216 includes PingPongMsgs216 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs217 {
+	message ping();
+	message pong();
+}
+
+thing PingClient217 includes PingPongMsgs217 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs218 {
+	message ping();
+	message pong();
+}
+
+thing PingClient218 includes PingPongMsgs218 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs219 {
+	message ping();
+	message pong();
+}
+
+thing PingClient219 includes PingPongMsgs219 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs220 {
+	message ping();
+	message pong();
+}
+
+thing PingClient220 includes PingPongMsgs220 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs221 {
+	message ping();
+	message pong();
+}
+
+thing PingClient221 includes PingPongMsgs221 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs222 {
+	message ping();
+	message pong();
+}
+
+thing PingClient222 includes PingPongMsgs222 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs223 {
+	message ping();
+	message pong();
+}
+
+thing PingClient223 includes PingPongMsgs223 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs224 {
+	message ping();
+	message pong();
+}
+
+thing PingClient224 includes PingPongMsgs224 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs225 {
+	message ping();
+	message pong();
+}
+
+thing PingClient225 includes PingPongMsgs225 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs226 {
+	message ping();
+	message pong();
+}
+
+thing PingClient226 includes PingPongMsgs226 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs227 {
+	message ping();
+	message pong();
+}
+
+thing PingClient227 includes PingPongMsgs227 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs228 {
+	message ping();
+	message pong();
+}
+
+thing PingClient228 includes PingPongMsgs228 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs229 {
+	message ping();
+	message pong();
+}
+
+thing PingClient229 includes PingPongMsgs229 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs230 {
+	message ping();
+	message pong();
+}
+
+thing PingClient230 includes PingPongMsgs230 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs231 {
+	message ping();
+	message pong();
+}
+
+thing PingClient231 includes PingPongMsgs231 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs232 {
+	message ping();
+	message pong();
+}
+
+thing PingClient232 includes PingPongMsgs232 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs233 {
+	message ping();
+	message pong();
+}
+
+thing PingClient233 includes PingPongMsgs233 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs234 {
+	message ping();
+	message pong();
+}
+
+thing PingClient234 includes PingPongMsgs234 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs235 {
+	message ping();
+	message pong();
+}
+
+thing PingClient235 includes PingPongMsgs235 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs236 {
+	message ping();
+	message pong();
+}
+
+thing PingClient236 includes PingPongMsgs236 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs237 {
+	message ping();
+	message pong();
+}
+
+thing PingClient237 includes PingPongMsgs237 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs238 {
+	message ping();
+	message pong();
+}
+
+thing PingClient238 includes PingPongMsgs238 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs239 {
+	message ping();
+	message pong();
+}
+
+thing PingClient239 includes PingPongMsgs239 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs240 {
+	message ping();
+	message pong();
+}
+
+thing PingClient240 includes PingPongMsgs240 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs241 {
+	message ping();
+	message pong();
+}
+
+thing PingClient241 includes PingPongMsgs241 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs242 {
+	message ping();
+	message pong();
+}
+
+thing PingClient242 includes PingPongMsgs242 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs243 {
+	message ping();
+	message pong();
+}
+
+thing PingClient243 includes PingPongMsgs243 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs244 {
+	message ping();
+	message pong();
+}
+
+thing PingClient244 includes PingPongMsgs244 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs245 {
+	message ping();
+	message pong();
+}
+
+thing PingClient245 includes PingPongMsgs245 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs246 {
+	message ping();
+	message pong();
+}
+
+thing PingClient246 includes PingPongMsgs246 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs247 {
+	message ping();
+	message pong();
+}
+
+thing PingClient247 includes PingPongMsgs247 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs248 {
+	message ping();
+	message pong();
+}
+
+thing PingClient248 includes PingPongMsgs248 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs249 {
+	message ping();
+	message pong();
+}
+
+thing PingClient249 includes PingPongMsgs249 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs250 {
+	message ping();
+	message pong();
+}
+
+thing PingClient250 includes PingPongMsgs250 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs251 {
+	message ping();
+	message pong();
+}
+
+thing PingClient251 includes PingPongMsgs251 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs252 {
+	message ping();
+	message pong();
+}
+
+thing PingClient252 includes PingPongMsgs252 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs253 {
+	message ping();
+	message pong();
+}
+
+thing PingClient253 includes PingPongMsgs253 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs254 {
+	message ping();
+	message pong();
+}
+
+thing PingClient254 includes PingPongMsgs254 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs255 {
+	message ping();
+	message pong();
+}
+
+thing PingClient255 includes PingPongMsgs255 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs256 {
+	message ping();
+	message pong();
+}
+
+thing PingClient256 includes PingPongMsgs256 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs257 {
+	message ping();
+	message pong();
+}
+
+thing PingClient257 includes PingPongMsgs257 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs258 {
+	message ping();
+	message pong();
+}
+
+thing PingClient258 includes PingPongMsgs258 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs259 {
+	message ping();
+	message pong();
+}
+
+thing PingClient259 includes PingPongMsgs259 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs260 {
+	message ping();
+	message pong();
+}
+
+thing PingClient260 includes PingPongMsgs260 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs261 {
+	message ping();
+	message pong();
+}
+
+thing PingClient261 includes PingPongMsgs261 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs262 {
+	message ping();
+	message pong();
+}
+
+thing PingClient262 includes PingPongMsgs262 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs263 {
+	message ping();
+	message pong();
+}
+
+thing PingClient263 includes PingPongMsgs263 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs264 {
+	message ping();
+	message pong();
+}
+
+thing PingClient264 includes PingPongMsgs264 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs265 {
+	message ping();
+	message pong();
+}
+
+thing PingClient265 includes PingPongMsgs265 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs266 {
+	message ping();
+	message pong();
+}
+
+thing PingClient266 includes PingPongMsgs266 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs267 {
+	message ping();
+	message pong();
+}
+
+thing PingClient267 includes PingPongMsgs267 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs268 {
+	message ping();
+	message pong();
+}
+
+thing PingClient268 includes PingPongMsgs268 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs269 {
+	message ping();
+	message pong();
+}
+
+thing PingClient269 includes PingPongMsgs269 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs270 {
+	message ping();
+	message pong();
+}
+
+thing PingClient270 includes PingPongMsgs270 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs271 {
+	message ping();
+	message pong();
+}
+
+thing PingClient271 includes PingPongMsgs271 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs272 {
+	message ping();
+	message pong();
+}
+
+thing PingClient272 includes PingPongMsgs272 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs273 {
+	message ping();
+	message pong();
+}
+
+thing PingClient273 includes PingPongMsgs273 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs274 {
+	message ping();
+	message pong();
+}
+
+thing PingClient274 includes PingPongMsgs274 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs275 {
+	message ping();
+	message pong();
+}
+
+thing PingClient275 includes PingPongMsgs275 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs276 {
+	message ping();
+	message pong();
+}
+
+thing PingClient276 includes PingPongMsgs276 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs277 {
+	message ping();
+	message pong();
+}
+
+thing PingClient277 includes PingPongMsgs277 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs278 {
+	message ping();
+	message pong();
+}
+
+thing PingClient278 includes PingPongMsgs278 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs279 {
+	message ping();
+	message pong();
+}
+
+thing PingClient279 includes PingPongMsgs279 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs280 {
+	message ping();
+	message pong();
+}
+
+thing PingClient280 includes PingPongMsgs280 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs281 {
+	message ping();
+	message pong();
+}
+
+thing PingClient281 includes PingPongMsgs281 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs282 {
+	message ping();
+	message pong();
+}
+
+thing PingClient282 includes PingPongMsgs282 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs283 {
+	message ping();
+	message pong();
+}
+
+thing PingClient283 includes PingPongMsgs283 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs284 {
+	message ping();
+	message pong();
+}
+
+thing PingClient284 includes PingPongMsgs284 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+thing fragment PingPongMsgs285 {
+	message ping();
+	message pong();
+}
+
+thing PingClient285 includes PingPongMsgs285 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+configuration PingPongCfg 
+@docker
+@arduino_stdout "Serial"
+{
+
+	instance client: PingClient1
+	instance server: PingServer
+	connector client.ping_service => server.ping_service
+
+}

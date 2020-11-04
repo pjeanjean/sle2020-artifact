@@ -1,0 +1,42 @@
+LogoProgram {
+	Proc Square1(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree1(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square1(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree1(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square1(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree1(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Square1(150.0);
+	Tree1(150.0, 8.0, 5.0)
+}

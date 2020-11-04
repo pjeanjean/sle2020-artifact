@@ -1,0 +1,6442 @@
+LogoProgram {
+	Proc Square1(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree1(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square1(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree1(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square1(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree1(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square2(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree2(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square2(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree2(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square2(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree2(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square3(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree3(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square3(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree3(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square3(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree3(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square4(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree4(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square4(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree4(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square4(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree4(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square5(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree5(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square5(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree5(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square5(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree5(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square6(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree6(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square6(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree6(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square6(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree6(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square7(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree7(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square7(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree7(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square7(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree7(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square8(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree8(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square8(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree8(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square8(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree8(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square9(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree9(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square9(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree9(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square9(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree9(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square10(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree10(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square10(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree10(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square10(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree10(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square11(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree11(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square11(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree11(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square11(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree11(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square12(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree12(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square12(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree12(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square12(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree12(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square13(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree13(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square13(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree13(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square13(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree13(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square14(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree14(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square14(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree14(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square14(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree14(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square15(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree15(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square15(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree15(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square15(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree15(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square16(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree16(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square16(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree16(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square16(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree16(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square17(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree17(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square17(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree17(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square17(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree17(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square18(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree18(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square18(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree18(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square18(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree18(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square19(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree19(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square19(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree19(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square19(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree19(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square20(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree20(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square20(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree20(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square20(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree20(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square21(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree21(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square21(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree21(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square21(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree21(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square22(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree22(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square22(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree22(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square22(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree22(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square23(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree23(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square23(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree23(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square23(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree23(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square24(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree24(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square24(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree24(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square24(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree24(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square25(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree25(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square25(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree25(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square25(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree25(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square26(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree26(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square26(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree26(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square26(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree26(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square27(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree27(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square27(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree27(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square27(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree27(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square28(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree28(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square28(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree28(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square28(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree28(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square29(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree29(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square29(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree29(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square29(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree29(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square30(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree30(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square30(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree30(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square30(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree30(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square31(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree31(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square31(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree31(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square31(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree31(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square32(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree32(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square32(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree32(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square32(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree32(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square33(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree33(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square33(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree33(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square33(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree33(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square34(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree34(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square34(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree34(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square34(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree34(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square35(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree35(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square35(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree35(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square35(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree35(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square36(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree36(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square36(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree36(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square36(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree36(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square37(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree37(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square37(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree37(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square37(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree37(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square38(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree38(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square38(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree38(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square38(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree38(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square39(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree39(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square39(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree39(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square39(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree39(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square40(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree40(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square40(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree40(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square40(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree40(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square41(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree41(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square41(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree41(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square41(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree41(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square42(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree42(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square42(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree42(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square42(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree42(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square43(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree43(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square43(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree43(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square43(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree43(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square44(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree44(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square44(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree44(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square44(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree44(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square45(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree45(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square45(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree45(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square45(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree45(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square46(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree46(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square46(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree46(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square46(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree46(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square47(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree47(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square47(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree47(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square47(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree47(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square48(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree48(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square48(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree48(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square48(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree48(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square49(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree49(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square49(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree49(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square49(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree49(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square50(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree50(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square50(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree50(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square50(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree50(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square51(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree51(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square51(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree51(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square51(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree51(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square52(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree52(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square52(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree52(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square52(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree52(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square53(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree53(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square53(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree53(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square53(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree53(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square54(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree54(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square54(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree54(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square54(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree54(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square55(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree55(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square55(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree55(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square55(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree55(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square56(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree56(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square56(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree56(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square56(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree56(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square57(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree57(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square57(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree57(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square57(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree57(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square58(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree58(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square58(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree58(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square58(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree58(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square59(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree59(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square59(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree59(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square59(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree59(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square60(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree60(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square60(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree60(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square60(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree60(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square61(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree61(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square61(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree61(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square61(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree61(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square62(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree62(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square62(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree62(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square62(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree62(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square63(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree63(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square63(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree63(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square63(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree63(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square64(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree64(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square64(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree64(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square64(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree64(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square65(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree65(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square65(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree65(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square65(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree65(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square66(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree66(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square66(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree66(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square66(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree66(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square67(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree67(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square67(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree67(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square67(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree67(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square68(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree68(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square68(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree68(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square68(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree68(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square69(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree69(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square69(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree69(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square69(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree69(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square70(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree70(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square70(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree70(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square70(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree70(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square71(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree71(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square71(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree71(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square71(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree71(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square72(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree72(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square72(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree72(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square72(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree72(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square73(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree73(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square73(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree73(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square73(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree73(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square74(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree74(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square74(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree74(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square74(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree74(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square75(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree75(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square75(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree75(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square75(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree75(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square76(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree76(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square76(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree76(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square76(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree76(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square77(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree77(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square77(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree77(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square77(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree77(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square78(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree78(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square78(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree78(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square78(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree78(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square79(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree79(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square79(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree79(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square79(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree79(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square80(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree80(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square80(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree80(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square80(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree80(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square81(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree81(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square81(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree81(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square81(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree81(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square82(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree82(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square82(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree82(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square82(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree82(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square83(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree83(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square83(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree83(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square83(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree83(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square84(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree84(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square84(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree84(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square84(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree84(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square85(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree85(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square85(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree85(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square85(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree85(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square86(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree86(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square86(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree86(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square86(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree86(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square87(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree87(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square87(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree87(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square87(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree87(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square88(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree88(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square88(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree88(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square88(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree88(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square89(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree89(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square89(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree89(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square89(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree89(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square90(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree90(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square90(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree90(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square90(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree90(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square91(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree91(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square91(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree91(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square91(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree91(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square92(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree92(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square92(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree92(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square92(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree92(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square93(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree93(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square93(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree93(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square93(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree93(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square94(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree94(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square94(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree94(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square94(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree94(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square95(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree95(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square95(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree95(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square95(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree95(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square96(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree96(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square96(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree96(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square96(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree96(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square97(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree97(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square97(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree97(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square97(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree97(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square98(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree98(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square98(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree98(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square98(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree98(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square99(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree99(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square99(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree99(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square99(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree99(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square100(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree100(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square100(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree100(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square100(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree100(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square101(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree101(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square101(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree101(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square101(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree101(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square102(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree102(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square102(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree102(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square102(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree102(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square103(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree103(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square103(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree103(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square103(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree103(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square104(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree104(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square104(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree104(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square104(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree104(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square105(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree105(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square105(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree105(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square105(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree105(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square106(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree106(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square106(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree106(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square106(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree106(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square107(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree107(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square107(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree107(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square107(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree107(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square108(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree108(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square108(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree108(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square108(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree108(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square109(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree109(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square109(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree109(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square109(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree109(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square110(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree110(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square110(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree110(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square110(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree110(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square111(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree111(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square111(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree111(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square111(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree111(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square112(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree112(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square112(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree112(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square112(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree112(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square113(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree113(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square113(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree113(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square113(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree113(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square114(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree114(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square114(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree114(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square114(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree114(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square115(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree115(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square115(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree115(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square115(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree115(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square116(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree116(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square116(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree116(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square116(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree116(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square117(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree117(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square117(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree117(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square117(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree117(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square118(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree118(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square118(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree118(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square118(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree118(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square119(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree119(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square119(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree119(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square119(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree119(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square120(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree120(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square120(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree120(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square120(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree120(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square121(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree121(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square121(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree121(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square121(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree121(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square122(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree122(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square122(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree122(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square122(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree122(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square123(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree123(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square123(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree123(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square123(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree123(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square124(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree124(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square124(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree124(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square124(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree124(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square125(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree125(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square125(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree125(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square125(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree125(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square126(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree126(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square126(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree126(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square126(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree126(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square127(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree127(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square127(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree127(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square127(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree127(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square128(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree128(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square128(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree128(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square128(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree128(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square129(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree129(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square129(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree129(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square129(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree129(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square130(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree130(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square130(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree130(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square130(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree130(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square131(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree131(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square131(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree131(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square131(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree131(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square132(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree132(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square132(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree132(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square132(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree132(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square133(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree133(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square133(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree133(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square133(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree133(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square134(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree134(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square134(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree134(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square134(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree134(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square135(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree135(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square135(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree135(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square135(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree135(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square136(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree136(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square136(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree136(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square136(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree136(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square137(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree137(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square137(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree137(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square137(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree137(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square138(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree138(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square138(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree138(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square138(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree138(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square139(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree139(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square139(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree139(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square139(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree139(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square140(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree140(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square140(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree140(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square140(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree140(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square141(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree141(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square141(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree141(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square141(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree141(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square142(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree142(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square142(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree142(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square142(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree142(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square143(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree143(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square143(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree143(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square143(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree143(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square144(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree144(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square144(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree144(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square144(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree144(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square145(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree145(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square145(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree145(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square145(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree145(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square146(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree146(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square146(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree146(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square146(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree146(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square147(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree147(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square147(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree147(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square147(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree147(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square148(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree148(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square148(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree148(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square148(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree148(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square149(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree149(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square149(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree149(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square149(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree149(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square150(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree150(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square150(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree150(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square150(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree150(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square151(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree151(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square151(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree151(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square151(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree151(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square152(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree152(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square152(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree152(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square152(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree152(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square153(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree153(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square153(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree153(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square153(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree153(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square154(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree154(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square154(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree154(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square154(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree154(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square155(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree155(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square155(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree155(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square155(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree155(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square156(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree156(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square156(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree156(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square156(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree156(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square157(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree157(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square157(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree157(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square157(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree157(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square158(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree158(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square158(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree158(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square158(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree158(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square159(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree159(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square159(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree159(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square159(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree159(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square160(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree160(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square160(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree160(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square160(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree160(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Proc Square161(size) {
+		PenDown;
+		Repeat 4.0 {
+			Forward size;
+			Left 90.0
+		};
+		PenUp
+	};
+
+	Proc Tree161(baseSize, depth, direction) {
+		
+		Proc SubSquareSize(size, angle) {
+			Return size * Cos angle
+		};
+	
+		Left 90.0;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Square161(SubSquareSize(baseSize, 45.0 + direction));
+		If depth > 0.0 {
+			Tree161(SubSquareSize(baseSize, 45.0 + direction), depth - 1.0, 0.0)
+		};
+		Right 45.0 + direction;
+		Forward baseSize;
+		Right 45.0 - direction;
+		Back baseSize;
+		Square161(SubSquareSize(baseSize, 45.0 - direction));
+		If depth > 0.0 {
+			Tree161(SubSquareSize(baseSize, 45.0 - direction), depth - 1.0, 0.0)
+		};
+		Forward SubSquareSize(baseSize, 45.0 - direction);
+		Left 45.0 - direction;
+		Back baseSize;
+		Left 90.0;
+		Back baseSize;
+		Right 90.0
+	};
+
+	Square1(150.0);
+	Tree1(150.0, 8.0, 5.0)
+	Square2(150.0);
+	Tree2(150.0, 8.0, 5.0)
+	Square3(150.0);
+	Tree3(150.0, 8.0, 5.0)
+	Square4(150.0);
+	Tree4(150.0, 8.0, 5.0)
+	Square5(150.0);
+	Tree5(150.0, 8.0, 5.0)
+	Square6(150.0);
+	Tree6(150.0, 8.0, 5.0)
+	Square7(150.0);
+	Tree7(150.0, 8.0, 5.0)
+	Square8(150.0);
+	Tree8(150.0, 8.0, 5.0)
+	Square9(150.0);
+	Tree9(150.0, 8.0, 5.0)
+	Square10(150.0);
+	Tree10(150.0, 8.0, 5.0)
+	Square11(150.0);
+	Tree11(150.0, 8.0, 5.0)
+	Square12(150.0);
+	Tree12(150.0, 8.0, 5.0)
+	Square13(150.0);
+	Tree13(150.0, 8.0, 5.0)
+	Square14(150.0);
+	Tree14(150.0, 8.0, 5.0)
+	Square15(150.0);
+	Tree15(150.0, 8.0, 5.0)
+	Square16(150.0);
+	Tree16(150.0, 8.0, 5.0)
+	Square17(150.0);
+	Tree17(150.0, 8.0, 5.0)
+	Square18(150.0);
+	Tree18(150.0, 8.0, 5.0)
+	Square19(150.0);
+	Tree19(150.0, 8.0, 5.0)
+	Square20(150.0);
+	Tree20(150.0, 8.0, 5.0)
+	Square21(150.0);
+	Tree21(150.0, 8.0, 5.0)
+	Square22(150.0);
+	Tree22(150.0, 8.0, 5.0)
+	Square23(150.0);
+	Tree23(150.0, 8.0, 5.0)
+	Square24(150.0);
+	Tree24(150.0, 8.0, 5.0)
+	Square25(150.0);
+	Tree25(150.0, 8.0, 5.0)
+	Square26(150.0);
+	Tree26(150.0, 8.0, 5.0)
+	Square27(150.0);
+	Tree27(150.0, 8.0, 5.0)
+	Square28(150.0);
+	Tree28(150.0, 8.0, 5.0)
+	Square29(150.0);
+	Tree29(150.0, 8.0, 5.0)
+	Square30(150.0);
+	Tree30(150.0, 8.0, 5.0)
+	Square31(150.0);
+	Tree31(150.0, 8.0, 5.0)
+	Square32(150.0);
+	Tree32(150.0, 8.0, 5.0)
+	Square33(150.0);
+	Tree33(150.0, 8.0, 5.0)
+	Square34(150.0);
+	Tree34(150.0, 8.0, 5.0)
+	Square35(150.0);
+	Tree35(150.0, 8.0, 5.0)
+	Square36(150.0);
+	Tree36(150.0, 8.0, 5.0)
+	Square37(150.0);
+	Tree37(150.0, 8.0, 5.0)
+	Square38(150.0);
+	Tree38(150.0, 8.0, 5.0)
+	Square39(150.0);
+	Tree39(150.0, 8.0, 5.0)
+	Square40(150.0);
+	Tree40(150.0, 8.0, 5.0)
+	Square41(150.0);
+	Tree41(150.0, 8.0, 5.0)
+	Square42(150.0);
+	Tree42(150.0, 8.0, 5.0)
+	Square43(150.0);
+	Tree43(150.0, 8.0, 5.0)
+	Square44(150.0);
+	Tree44(150.0, 8.0, 5.0)
+	Square45(150.0);
+	Tree45(150.0, 8.0, 5.0)
+	Square46(150.0);
+	Tree46(150.0, 8.0, 5.0)
+	Square47(150.0);
+	Tree47(150.0, 8.0, 5.0)
+	Square48(150.0);
+	Tree48(150.0, 8.0, 5.0)
+	Square49(150.0);
+	Tree49(150.0, 8.0, 5.0)
+	Square50(150.0);
+	Tree50(150.0, 8.0, 5.0)
+	Square51(150.0);
+	Tree51(150.0, 8.0, 5.0)
+	Square52(150.0);
+	Tree52(150.0, 8.0, 5.0)
+	Square53(150.0);
+	Tree53(150.0, 8.0, 5.0)
+	Square54(150.0);
+	Tree54(150.0, 8.0, 5.0)
+	Square55(150.0);
+	Tree55(150.0, 8.0, 5.0)
+	Square56(150.0);
+	Tree56(150.0, 8.0, 5.0)
+	Square57(150.0);
+	Tree57(150.0, 8.0, 5.0)
+	Square58(150.0);
+	Tree58(150.0, 8.0, 5.0)
+	Square59(150.0);
+	Tree59(150.0, 8.0, 5.0)
+	Square60(150.0);
+	Tree60(150.0, 8.0, 5.0)
+	Square61(150.0);
+	Tree61(150.0, 8.0, 5.0)
+	Square62(150.0);
+	Tree62(150.0, 8.0, 5.0)
+	Square63(150.0);
+	Tree63(150.0, 8.0, 5.0)
+	Square64(150.0);
+	Tree64(150.0, 8.0, 5.0)
+	Square65(150.0);
+	Tree65(150.0, 8.0, 5.0)
+	Square66(150.0);
+	Tree66(150.0, 8.0, 5.0)
+	Square67(150.0);
+	Tree67(150.0, 8.0, 5.0)
+	Square68(150.0);
+	Tree68(150.0, 8.0, 5.0)
+	Square69(150.0);
+	Tree69(150.0, 8.0, 5.0)
+	Square70(150.0);
+	Tree70(150.0, 8.0, 5.0)
+	Square71(150.0);
+	Tree71(150.0, 8.0, 5.0)
+	Square72(150.0);
+	Tree72(150.0, 8.0, 5.0)
+	Square73(150.0);
+	Tree73(150.0, 8.0, 5.0)
+	Square74(150.0);
+	Tree74(150.0, 8.0, 5.0)
+	Square75(150.0);
+	Tree75(150.0, 8.0, 5.0)
+	Square76(150.0);
+	Tree76(150.0, 8.0, 5.0)
+	Square77(150.0);
+	Tree77(150.0, 8.0, 5.0)
+	Square78(150.0);
+	Tree78(150.0, 8.0, 5.0)
+	Square79(150.0);
+	Tree79(150.0, 8.0, 5.0)
+	Square80(150.0);
+	Tree80(150.0, 8.0, 5.0)
+	Square81(150.0);
+	Tree81(150.0, 8.0, 5.0)
+	Square82(150.0);
+	Tree82(150.0, 8.0, 5.0)
+	Square83(150.0);
+	Tree83(150.0, 8.0, 5.0)
+	Square84(150.0);
+	Tree84(150.0, 8.0, 5.0)
+	Square85(150.0);
+	Tree85(150.0, 8.0, 5.0)
+	Square86(150.0);
+	Tree86(150.0, 8.0, 5.0)
+	Square87(150.0);
+	Tree87(150.0, 8.0, 5.0)
+	Square88(150.0);
+	Tree88(150.0, 8.0, 5.0)
+	Square89(150.0);
+	Tree89(150.0, 8.0, 5.0)
+	Square90(150.0);
+	Tree90(150.0, 8.0, 5.0)
+	Square91(150.0);
+	Tree91(150.0, 8.0, 5.0)
+	Square92(150.0);
+	Tree92(150.0, 8.0, 5.0)
+	Square93(150.0);
+	Tree93(150.0, 8.0, 5.0)
+	Square94(150.0);
+	Tree94(150.0, 8.0, 5.0)
+	Square95(150.0);
+	Tree95(150.0, 8.0, 5.0)
+	Square96(150.0);
+	Tree96(150.0, 8.0, 5.0)
+	Square97(150.0);
+	Tree97(150.0, 8.0, 5.0)
+	Square98(150.0);
+	Tree98(150.0, 8.0, 5.0)
+	Square99(150.0);
+	Tree99(150.0, 8.0, 5.0)
+	Square100(150.0);
+	Tree100(150.0, 8.0, 5.0)
+	Square101(150.0);
+	Tree101(150.0, 8.0, 5.0)
+	Square102(150.0);
+	Tree102(150.0, 8.0, 5.0)
+	Square103(150.0);
+	Tree103(150.0, 8.0, 5.0)
+	Square104(150.0);
+	Tree104(150.0, 8.0, 5.0)
+	Square105(150.0);
+	Tree105(150.0, 8.0, 5.0)
+	Square106(150.0);
+	Tree106(150.0, 8.0, 5.0)
+	Square107(150.0);
+	Tree107(150.0, 8.0, 5.0)
+	Square108(150.0);
+	Tree108(150.0, 8.0, 5.0)
+	Square109(150.0);
+	Tree109(150.0, 8.0, 5.0)
+	Square110(150.0);
+	Tree110(150.0, 8.0, 5.0)
+	Square111(150.0);
+	Tree111(150.0, 8.0, 5.0)
+	Square112(150.0);
+	Tree112(150.0, 8.0, 5.0)
+	Square113(150.0);
+	Tree113(150.0, 8.0, 5.0)
+	Square114(150.0);
+	Tree114(150.0, 8.0, 5.0)
+	Square115(150.0);
+	Tree115(150.0, 8.0, 5.0)
+	Square116(150.0);
+	Tree116(150.0, 8.0, 5.0)
+	Square117(150.0);
+	Tree117(150.0, 8.0, 5.0)
+	Square118(150.0);
+	Tree118(150.0, 8.0, 5.0)
+	Square119(150.0);
+	Tree119(150.0, 8.0, 5.0)
+	Square120(150.0);
+	Tree120(150.0, 8.0, 5.0)
+	Square121(150.0);
+	Tree121(150.0, 8.0, 5.0)
+	Square122(150.0);
+	Tree122(150.0, 8.0, 5.0)
+	Square123(150.0);
+	Tree123(150.0, 8.0, 5.0)
+	Square124(150.0);
+	Tree124(150.0, 8.0, 5.0)
+	Square125(150.0);
+	Tree125(150.0, 8.0, 5.0)
+	Square126(150.0);
+	Tree126(150.0, 8.0, 5.0)
+	Square127(150.0);
+	Tree127(150.0, 8.0, 5.0)
+	Square128(150.0);
+	Tree128(150.0, 8.0, 5.0)
+	Square129(150.0);
+	Tree129(150.0, 8.0, 5.0)
+	Square130(150.0);
+	Tree130(150.0, 8.0, 5.0)
+	Square131(150.0);
+	Tree131(150.0, 8.0, 5.0)
+	Square132(150.0);
+	Tree132(150.0, 8.0, 5.0)
+	Square133(150.0);
+	Tree133(150.0, 8.0, 5.0)
+	Square134(150.0);
+	Tree134(150.0, 8.0, 5.0)
+	Square135(150.0);
+	Tree135(150.0, 8.0, 5.0)
+	Square136(150.0);
+	Tree136(150.0, 8.0, 5.0)
+	Square137(150.0);
+	Tree137(150.0, 8.0, 5.0)
+	Square138(150.0);
+	Tree138(150.0, 8.0, 5.0)
+	Square139(150.0);
+	Tree139(150.0, 8.0, 5.0)
+	Square140(150.0);
+	Tree140(150.0, 8.0, 5.0)
+	Square141(150.0);
+	Tree141(150.0, 8.0, 5.0)
+	Square142(150.0);
+	Tree142(150.0, 8.0, 5.0)
+	Square143(150.0);
+	Tree143(150.0, 8.0, 5.0)
+	Square144(150.0);
+	Tree144(150.0, 8.0, 5.0)
+	Square145(150.0);
+	Tree145(150.0, 8.0, 5.0)
+	Square146(150.0);
+	Tree146(150.0, 8.0, 5.0)
+	Square147(150.0);
+	Tree147(150.0, 8.0, 5.0)
+	Square148(150.0);
+	Tree148(150.0, 8.0, 5.0)
+	Square149(150.0);
+	Tree149(150.0, 8.0, 5.0)
+	Square150(150.0);
+	Tree150(150.0, 8.0, 5.0)
+	Square151(150.0);
+	Tree151(150.0, 8.0, 5.0)
+	Square152(150.0);
+	Tree152(150.0, 8.0, 5.0)
+	Square153(150.0);
+	Tree153(150.0, 8.0, 5.0)
+	Square154(150.0);
+	Tree154(150.0, 8.0, 5.0)
+	Square155(150.0);
+	Tree155(150.0, 8.0, 5.0)
+	Square156(150.0);
+	Tree156(150.0, 8.0, 5.0)
+	Square157(150.0);
+	Tree157(150.0, 8.0, 5.0)
+	Square158(150.0);
+	Tree158(150.0, 8.0, 5.0)
+	Square159(150.0);
+	Tree159(150.0, 8.0, 5.0)
+	Square160(150.0);
+	Tree160(150.0, 8.0, 5.0)
+	Square161(150.0);
+	Tree161(150.0, 8.0, 5.0)
+}

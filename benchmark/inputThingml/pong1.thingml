@@ -1,0 +1,80 @@
+
+thing fragment PingPongMsgs {
+	message ping();
+	message pong();
+}
+
+thing PingServer includes PingPongMsgs {
+
+	provided port ping_service {
+		sends pong
+		receives ping
+	}
+
+	statechart PongServerMachine init Active {
+
+        on entry print "Ping Server Started!\n"
+
+		state Active {
+			
+			internal event ping_service?ping
+			action ping_service!pong()
+			
+		}
+	}
+}
+
+thing fragment PingPongMsgs1 {
+	message ping();
+	message pong();
+}
+
+thing PingClient1 includes PingPongMsgs1 {
+
+	required port ping_service {
+		receives pong
+		sends ping
+	}
+	
+	statechart PingClientMachine init Ping {
+	
+	on entry print "Ping Client Started!\n"
+	
+		state Ping {
+			
+			on entry do
+				print "Send Ping..." 
+				ping_service!ping()
+			end
+				
+			
+			transition PONG -> Pong 
+			event ping_service?pong
+			
+		}
+		
+		state Pong {
+			on entry print "Got pong!\n"
+			
+			transition -> Stop
+			
+		}
+		
+		state Stop {
+			on entry print "Bye.\n"
+		}
+		
+	}
+	
+}
+
+configuration PingPongCfg 
+@docker
+@arduino_stdout "Serial"
+{
+
+	instance client: PingClient1
+	instance server: PingServer
+	connector client.ping_service => server.ping_service
+
+}

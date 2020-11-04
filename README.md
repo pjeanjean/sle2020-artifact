@@ -65,7 +65,7 @@ Type `./build-images.sh` to build the Docker images of the microservices for Nab
 Go back with `cd ~/git/sle2020-artifact` and type `./initCluster.sh ~/eclipse-workspace/nablab` to launch a mini Kubernetes cluster locally and do an initial deployment of the Nablab microservices.  
 This command may take a few minutes to complete.
 
-Open a new tab `with Ctrl+Shift+T`.  
+Open a new tab with `Ctrl+Shift+T`.  
 Enter the command `./launchInspector.sh`. It will launch a service used to interact with the cluster.
 
 **Serve the web app**  

@@ -207,7 +207,7 @@ public static final String SERVICE_ID = "formatting";
 				"	@Override\n" + 
 				"	public void configure() {\n" + 
 				"		binder().bind(%s.class).to(%s.class);\n" + 
-				"		binder().bind(IFormatter2.class).to(NullFormatter.class);\n" +
+				"		//binder().bind(IFormatter2.class).to(NullFormatter.class);\n" +
 				"	}\n" + 
 				"	\n" + 
 				"}";

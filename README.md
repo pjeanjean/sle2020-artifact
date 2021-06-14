@@ -28,6 +28,30 @@ You should then see a new VM on the left side of the UI, right-click on it and p
 
 This section describes how to generate microservices for the NabLab language, how to deploy them, and to use the web application.
 
+### Setup without using the VM
+
+This requires a working Eclipse installation with Eclipse PDE support and Xtext installed.
+
+The first step is to install the plug-ins provided in this repository.
+From a clean workspace, import the projects inside the folder `generator` (you might need to fix the classpath of `kaulua.fm.generator` and add the libraries provided in the `lib` folder, and install the plugin FeatureIDE from the marketplace).
+
+After all the plug-ins compile properly without error, create a new run configuration that starts another Eclipse instance, using another clean workspace, to deploy them locally.
+
+If you get a missing dependency for `javax.xml.bind`, you can disregard it.
+
+In the new Eclipse instance, open the projects inside the `nablab` folder and follow instructions until `Microservices deployment`.
+Note that every Quarkus related errors are not important during the generation phase.
+
+Before deploying the language services, run the script `backend/build-images.sh`.
+Then go into the folder `nablab` and run `mvn install` (if you need priviledged rights to run Docker commands, be careful to do this with the same user).
+
+The deployment currently depends on `kind`.
+
+To build the frontend, you will need `npm` and `webpack`. Install webpack with `npm install webpack`.
+Then run `npm run build`.
+
+You can use the `http-server` module to run the frontend, install it with `npm install http-server` and launch it using `npm run serve`.
+
 ### Microservices generation
 
 Open the folder `/home/vagrant/eclipse` and double click on `eclipse` to launch Eclipse IDE.

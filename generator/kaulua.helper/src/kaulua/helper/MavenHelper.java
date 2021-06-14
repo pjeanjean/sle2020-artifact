@@ -9,6 +9,10 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 import org.apache.maven.model.Dependency;
+import org.apache.maven.model.Plugin;
+import org.apache.maven.model.PluginExecution;
+import org.apache.maven.plugin.lifecycle.Execution;
+import org.codehaus.plexus.util.xml.Xpp3Dom;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.CoreException;
@@ -202,13 +206,28 @@ public class MavenHelper {
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-
+		
 		List<MavenProjectInfo> mavenProjects = projectScanner.getProjects();
 		Optional<MavenProjectInfo> project = mavenProjects.stream()
 				.filter(prj -> projectName.equals(prj.getModel().getArtifactId())).findFirst();
 
 		if (project.isPresent()) {
-			project.get().getModel().getBuild().setSourceDirectory("src,src-gen");
+			Plugin srcGenPlugin = new Plugin();
+			srcGenPlugin.setGroupId("org.codehaus.mojo");
+			srcGenPlugin.setArtifactId("build-helper-maven-plugin");
+			srcGenPlugin.setVersion("3.0.0");
+			PluginExecution execution = new PluginExecution();
+			execution.setPhase("generate-sources");
+			execution.addGoal("add-source");
+			Xpp3Dom configuration = new Xpp3Dom("configuration");
+			Xpp3Dom sources = new Xpp3Dom("sources");
+			Xpp3Dom source = new Xpp3Dom("source");
+			source.setValue("src-gen");
+			sources.addChild(source);
+			configuration.addChild(sources);
+			execution.setConfiguration(configuration);
+			srcGenPlugin.addExecution(execution);
+			project.get().getModel().getBuild().addPlugin(srcGenPlugin);
 
 			MavenImpl maven = new MavenImpl(new MavenConfigurationImpl());
 			FileOutputStream out;

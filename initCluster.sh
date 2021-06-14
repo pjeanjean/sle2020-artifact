@@ -7,7 +7,7 @@ LANG_FOLDER=$1
 # Create the cluster 
 kind delete cluster --name clusterone
 kind create cluster --config config_cluster.yaml --name clusterone
-export KUBECONFIG="$(kind get kubeconfig-path --name="clusterone")"
+kind get kubeconfig --name="clusterone" > `printenv HOME`/.kube/config
 
 # Label nodes
 kubectl label nodes clusterone-worker kaulua-selector=node1
